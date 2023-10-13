@@ -1,0 +1,29 @@
+Database Servers in Web Development
+
+Database server applications are fundamental to the infrastructure of most online services, serving as a crucial component for dynamic web applications. Here's an overview:
+
+1. Role in Web Applications:
+   - Dynamic web applications interact with database servers to retrieve and store data.
+   - Example Scenario: A web application for tracking online students may utilize a front-end server for presenting a web form. Data entered into the form is written to a database application (e.g., MariaDB). Instructors can then query the database through the web application to access student information.
+
+2. MariaDB:
+   - A community-developed fork of the MySQL relational database management system.
+   - Widely used for web development.
+   - One of many database server options chosen based on specific project requirements.
+
+3. Structured Query Language (SQL):
+   - Language used for interacting with relational databases.
+   - Enables tasks such as data retrieval, aggregation, and report generation.
+   
+4. Other Popular Databases:
+   - Firebird: Another database server used in web development.
+   - PostgreSQL: Widely adopted for its advanced features and extensibility.
+
+5. Database Functionality:
+   - Stores information efficiently.
+   - Facilitates easy retrieval and querying of data.
+
+6. SQL for Data Manipulation:
+   - Users can employ SQL to perform tasks like aggregating sales figures by product and date for reporting purposes.
+
+In summary, database servers, including MariaDB, play a pivotal role in web development, enabling the storage, retrieval, and manipulation of data for dynamic web applications. SQL serves as a powerful tool for interacting with relational databases, and various database options, such as Firebird and PostgreSQL, cater to diverse project requirements.
