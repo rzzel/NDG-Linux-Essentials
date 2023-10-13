@@ -1,0 +1,34 @@
+Web Servers and Linux
+
+Web servers play a crucial role in serving web content and facilitating communication between web browsers and servers. Linux, with its reliability and flexibility, became an early choice for web server hosting. Here are key points about web servers and their association with Linux:
+
+1. Web Server Basics:
+   - Web servers host content for web pages.
+   - Content is accessed by web browsers using HTTP or its encrypted version, HTTPS.
+   - Web pages can be static or dynamic.
+
+2. Dynamic Websites:
+   - In dynamic sites, the web server sends requests to an application that generates content.
+   - Example: WordPress allows users to create content through a browser, and the software dynamically generates functional websites.
+
+3. Apache HTTP Server:
+   - Apache is a dominant and widely used web server.
+   - Originally a standalone project, Apache HTTP Server (HTTPD) is the daemon serving web page requests.
+   - Maintained by the Apache Software Foundation.
+
+4. NGINX:
+   - NGINX is another popular web server, originating from Russia.
+   - Focuses on performance, utilizing modern UNIX kernels.
+   - Offers a subset of features compared to Apache.
+   - Over 65% of websites are powered by NGINX or Apache.
+
+5. Web Server Landscape:
+   - The web server landscape is diverse, with various options available.
+   - Apache and NGINX are two major players, each with its strengths and use cases.
+   - Both support Linux as their operating environment.
+
+6. Apache Software Foundation:
+   - Apache HTTP Server is just one project maintained by the Apache Software Foundation.
+   - The foundation oversees numerous open source software projects.
+
+In summary, Linux's role in web hosting, especially with servers like Apache and NGINX, has been pivotal. The combination of Linux's stability and the capabilities of these web servers has contributed to the widespread use of Linux in the web server landscape.
