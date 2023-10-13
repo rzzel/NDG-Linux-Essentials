@@ -1,0 +1,25 @@
+Windows-Centric File Sharing:
+- Samba is a key solution, enabling a Linux machine to emulate a Windows machine for file sharing in Windows domains.
+- Samba implements both server and client components, facilitating file sharing between Linux and Windows systems.
+
+Apple Macintosh File Server:
+- The Netatalk project allows a Linux machine to function as an Apple Macintosh file server.
+
+Native File Sharing Protocol for UNIX/Linux:
+- The Network File System (NFS) is the native file sharing protocol for UNIX/Linux.
+- NFS is usually part of the kernel, allowing remote file systems to be mounted like regular disks.
+
+Network Directory Systems:
+- The Domain Name System (DNS) is a foundational network directory system, converting names to IP addresses.
+- DNS holds global information, including the address of the Mail Transfer Agent (MTA) for a given domain.
+- Organizations may run their DNS servers for public-facing names and internal service directories.
+- The Internet Software Consortium maintains the popular DNS server called Bind.
+
+Directory Systems and LDAP:
+- Lightweight Directory Access Protocol (LDAP) is a common directory system, also used in Microsoft’s Active Directory.
+- LDAP organizes objects in a tree structure, providing a searchable and hierarchical directory.
+- OpenLDAP is a dominant program used in Linux infrastructure for LDAP.
+
+Dynamic Host Configuration Protocol (DHCP):
+- DHCP assigns IP addresses to computers upon booting up.
+- ISC DHCP server, maintained by the Internet Systems Consortium, is the most common open-source DHCP server.
