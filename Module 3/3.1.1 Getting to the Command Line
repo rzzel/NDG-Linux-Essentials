@@ -1,0 +1,24 @@
+**Command Line Interface (CLI) in Linux**
+
+The Command Line Interface (CLI) is a text input system allowing users to enter commands or scripts to control a computer. On systems with GUIs, two common ways to access the CLI are through a GUI-based terminal or a virtual terminal:
+
+1. **GUI Terminal:**
+   - A program in the GUI environment emulating a terminal window.
+   - Accessed through the menu system, e.g., in CentOS: Applications > System Tools > Terminal.
+   - Search tools can be used to locate the terminal application.
+
+   ![Screenshot](link_to_screenshot) *Example: Using the search function in Ubuntu to find a terminal application.*
+
+2. **Virtual Terminal:**
+   - Can run concurrently with a GUI but requires login before executing commands.
+   - Accessed through applications like terminal or x-term in the GUI.
+   
+   *Note: While terms like console and terminal window may have subtle differences, they are functionally the same for administrators.*
+
+Linux desktop distributions vary, but opening a terminal window from the GUI involves applications like terminal or x-term. For administrators, command line tasks include starting programs, parsing scripts, and editing configuration text files for systems or applications.
+
+**Server Environments:**
+- Most servers boot directly to a terminal for resource efficiency in server-based operations.
+- GUIs are generally unnecessary for server tasks.
+
+Understanding the CLI is crucial for administrators to efficiently manage Linux systems.
