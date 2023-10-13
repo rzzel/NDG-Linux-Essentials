@@ -1,0 +1,25 @@
+Role of the Kernel in an Operating System
+
+The kernel in an operating system acts like an air traffic controller at an airport, managing resources and handling various tasks to ensure the smooth operation of the system. Here are key functions performed by the kernel:
+
+1. Resource Allocation:
+   - The kernel decides which program receives blocks of memory, CPU time, and disk space.
+   - Applications make requests to the kernel for resources, and it arbitrates conflicts if multiple applications request the same resource.
+
+2. Abstraction:
+   - The kernel abstracts complex details from applications, such as the type of storage (solid-state drive, hard disk, network file share).
+   - Applications follow the kernel's API, allowing them to function without worrying about implementation details.
+
+3. Multitasking:
+   - Handles multitasking by switching between applications.
+   - Manages CPU and memory resources efficiently.
+   - Pauses one task and loads another based on demand and available resources.
+
+4. Process Management:
+   - Introduces the concept of a process, a single task loaded and tracked by the kernel.
+   - Applications may consist of multiple processes, and the kernel manages their execution, starting and stopping them as needed.
+
+5. Task Switching:
+   - Rapidly switches focus between tasks, creating an illusion of simultaneous execution of multiple tasks.
+
+Applications, ranging from user-facing tools to network services and internal tasks, are treated uniformly by the kernel. The kernel's role is to facilitate the execution of processes, ensuring efficient use of system resources and preventing conflicts.
