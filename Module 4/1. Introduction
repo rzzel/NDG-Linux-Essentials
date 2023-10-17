@@ -1,0 +1,22 @@
+
+
+Software projects take the form of source code, which must be compiled into machine instructions by a compiler to be understood by the computer.
+
+- **Closed Source License:** Historically, commercial software was sold under a closed source license, limiting users from accessing the source code.
+
+- **Interpreted Languages:** Another method involves interpreted languages like PERL, Python, and BASH scripting, where code is not compiled but interpreted by a binary executable.
+
+- **Rise of Open Source:** The development of Linux aligns with the rise of open source software, emphasizing user rights to access, modify, and redistribute source code.
+
+- **Open Source Philosophy:** Users have the right to obtain and modify software source code, fostering a community of developers and users for shared responsibility.
+
+- **Linux Success:** Linux, written in C, embraced open source philosophy, attracting skilled programmers. Linux servers outperformed proprietary systems, gaining acceptance in large organizations.
+
+- **UNIX History:** UNIX, created in 1969, became standardized, with 4.2BSD introducing TCP/IP in 1984. UNIX systems, before Linux, dominated corporate and scientific applications.
+
+- **Standardization and Compatibility:** Standardization of APIs, supported by organizations like IEEE and POSIX, allows easy porting of programs across different UNIX/Linux systems.
+
+- **Importance of Standards:** Standards enable collaboration, making it possible for diverse systems and programs to work together. Open source thrives on collaboration and standards.
+
+Every innovation in computing builds on the work of others. Open source software is a collaboration, and standards are crucial for industry progress.
+
