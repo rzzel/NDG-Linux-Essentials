@@ -1,0 +1,46 @@
+Free Software Foundation (FSF)
+Founded: 1985 by Richard Stallman.
+Goal: Promotion of free software, emphasizing freedom to share, study, and modify source code.
+"Free" Definition: Not about price but the freedom to control technology.
+Philosophy - Copyleft:
+Requires sharing modifications when distributing the software again.
+Copyleft ensures all modified versions remain free.
+Stance Against Software Patents:
+Advocacy against software patents.
+Watchdog for Standards:
+Vigilant against standards violating free software principles, e.g., Digital Rights Management (DRM).
+Licenses Developed:
+GNU General Public License version 2 (GPLv2) and version 3 (GPLv3).
+GNU Lesser General Public Licenses version 2 (LGPLv2) and version 3 (LGPLv3).
+Purpose of Licenses:
+Inclusion in source code ensures ongoing freedom of use for all modifications.
+Global Impact: Legal tools for advancing free software worldwide.
+Open Source Initiative (OSI)
+Founded: 1998 as a response to perceived ambiguity in the term "free software."
+Goal: Promotion of open source software, focusing on practical benefits rather than philosophical freedom.
+Definition of "Open Source":
+Access to source code, distribution rights, modifications allowed, integrity of the author's source code.
+Approved Licenses:
+OSI provides a list of approved open source licenses.
+Business-Friendly Approach:
+Emphasis on practical advantages, attracting corporate involvement.
+Considerations
+FSF Philosophy:
+Advocates for philosophical freedom and copyleft.
+Opposes Tivoization – the use of free software on closed hardware devices.
+GPLv2 vs. GPLv3:
+Focus on Tivoization led to specific clauses in GPLv3.
+Linus Torvalds prefers GPLv2, disagreeing with GPLv3's approach.
+Conclusion
+Influence on Open Source:
+FSF and OSI are influential forces shaping the open source landscape.
+Philosophical vs. Practical:
+FSF focuses on philosophical freedom with copyleft.
+OSI emphasizes practical benefits of open source for wider adoption.
+Evolution of Licenses:
+Ongoing discussions, evident in changes between GPLv2 and GPLv3.
+Impact on the World:
+From Stallman's desire to share software in 1983 to changing the world through legal tools.
+Divergent Views:
+Divergence between FSF's strong philosophical stance and OSI's business-friendly approach.
+GPL licenses remain powerful instruments for preserving software freedom.
