@@ -1,0 +1,17 @@
+Open Source Licenses and Differences:
+- OSI (Open Source Initiative) founded in 1998 by Bruce Perens and Eric Raymond as a response to perceived political charge and extremism of FSF.
+- OSI believes in freely available source code and no restrictions on software use.
+- OSI doesn't have its own licenses but has a set of principles for open source licenses.
+- BSD licenses, simpler than GPL, are examples of open source licenses with fewer restrictions.
+- BSD licenses allow redistribution of source and binaries with proper attribution.
+- Original BSD license had an issue of requiring acknowledgments, leading to multiple acknowledgments.
+
+FSF Licenses and Permissive Free Software Licenses:
+- FSF licenses like GPLv2 are open source licenses.
+- Many open source licenses, including BSD and MIT, lack copyleft provisions and are called permissive free software licenses.
+- Permissive licenses allow the inclusion of the software in closed-source products with proper attribution.
+
+Free/Libre/Open Source Software (FLOSS):
+- The term FLOSS is used to collectively refer to Free, Open Source, and Libre Software.
+- "Free" can mean both "free as in cost" and "free as in speech," leading to ambiguity.
+- "Libre" is added to distinguish the latter definition, emphasizing no restrictions on software usage.
