@@ -1,0 +1,27 @@
+FOSS Licenses and Public Domain:
+- FOSS (Free and Open Source Software) licenses are primarily associated with software.
+- Although some have placed drawings and plans under FOSS licenses, it was not the original intent.
+- Placing software in the public domain means relinquishing all rights, including copyright.
+- In some countries, government agency work defaults to the public domain.
+- In some countries, copyrighted work enters the public domain after the author's death and a waiting period.
+
+Creative Commons (CC) Licenses:
+- Creative Commons (CC) organization created licenses for non-software entities.
+- CC licenses can be used to restrict commercial use as desired by the copyright holder.
+- CC licenses are based on a set of conditions that creators can apply to their work.
+
+CC License Conditions:
+1. Attribution (BY): Requires giving credit to the creator without implying endorsement.
+2. ShareAlike (SA): Allows others to copy, distribute, perform, and modify the work under the same terms.
+3. NonCommercial (NC): Permits non-commercial distribution, display, performance, and modification.
+4. NoDerivatives (ND): Permits distribution, display, and performance of original copies, with modification requiring the creator's permission.
+
+CC License Types:
+1. Attribution (CC BY): Similar to the BSD license, content can be used for any purpose with proper credit.
+2. Attribution ShareAlike (CC BY-SA): Requires derived works to be shared under the same license, like in Free Software ideals.
+3. Attribution NoDerivs (CC BY-ND): Allows redistribution under CC-BY conditions but prohibits modification.
+4. Attribution-NonCommercial (CC BY-NC): Similar to CC BY but not for commercial purposes.
+5. Attribution-NonCommercial-ShareAlike (CC BY-NC-SA): Builds on CC BY-NC but mandates sharing changes under the same license.
+6. Attribution-NonCommercial-NoDerivs (CC BY-NC-ND): Content is shared for non-commercial use without modification.
+7. No Rights Reserved (CC0): CC's version of the public domain, where all rights are waived.
+
