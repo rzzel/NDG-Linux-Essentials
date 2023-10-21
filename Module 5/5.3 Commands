@@ -1,0 +1,18 @@
+What Is a Command:
+
+A command is a software program that, when executed on the CLI, performs an action on the computer.
+Executing a Command:
+
+To execute a command, type the command's name in the terminal and press Enter.
+For example, typing "ls" and hitting Enter executes the "ls" command.
+Example Output:
+
+
+sysadmin@localhost:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+The "ls" command, when executed, lists files and directories in the current working directory.
+Understanding Command Format:
+
+The typical format for a command is: command [options] [arguments].
+Options modify the command's behavior, while arguments provide additional information (e.g., a filename or a username).
+Options and arguments are usually separated by a space, although options can often be combined.
