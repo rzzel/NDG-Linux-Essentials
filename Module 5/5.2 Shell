@@ -1,0 +1,21 @@
+The CLI and the Shell:
+- After a user enters a command, the terminal passes it to a shell.
+- The shell is a command line interpreter that translates user commands into actions for the operating system.
+- It displays text output from commands and error messages if issues are encountered.
+
+Types of Shells:
+- Linux supports various shells, with the Bash shell being the most commonly used.
+- Bash offers advanced features like command history and inline editing for re-executing and editing commands easily.
+
+Features of the Bash Shell:
+- Scripting: Allows creating and executing command scripts with programming features like conditional statements and functions (subroutines).
+- Aliases: Create short nicknames for longer commands for convenience.
+- Variables: Store information for the shell and users, modifying command behavior and providing system information.
+- Bash has a wide range of capabilities beyond these examples.
+
+The CLI Prompt:
+- The prompt is a vital part of the terminal interface, indicating the readiness for command input and conveying useful information.
+- The prompt structure can be customized and contains user and system information.
+- A common prompt structure includes User Name, System Name, and Current Directory, often using ~ to represent the user's home directory.
+
+These notes provide an overview of the CLI, the role of the shell, and the structure of the prompt in Linux, emphasizing the flexibility and utility of the Bash shell.
