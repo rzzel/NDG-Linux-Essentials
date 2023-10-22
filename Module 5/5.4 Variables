@@ -1,0 +1,15 @@
+Variables in the Bash Shell:
+
+- A variable is a feature that allows the user or the shell to store data temporarily.
+- These data values can be used for various purposes, such as providing system information or modifying the behavior of the Bash shell or other commands.
+
+Types of Variables:
+1. Local Variables:
+   - Local variables are specific to the current shell session.
+   - They are used for temporary storage of data within a script or shell session.
+
+2. Environment Variables:
+   - Environment variables are accessible to all processes and commands.
+   - They store data that can be used globally throughout the system.
+
+Variables are named and can be used to hold values or configuration settings for use within the shell environment or across various processes.
