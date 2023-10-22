@@ -1,0 +1,27 @@
+The PATH Variable in the Bash Shell:
+
+- The PATH variable is one of the most important Bash shell variables.
+- It contains a list of directories that define where the shell looks to find commands.
+- If a command is not found in any of these directories, the shell returns a "command not found" error.
+
+Displaying the PATH Variable:
+- To view the current PATH variable, use the "echo" command followed by $PATH.
+
+Example:
+sysadmin@localhost:~$ echo $PATH
+- This displays the PATH variable, which is a list of directories separated by colons.
+
+Order of Directory Search:
+- The shell checks directories in the order they are listed in the PATH variable.
+- If a command with the same name exists in multiple directories, the first one found in the PATH is executed.
+
+Modifying the PATH Variable:
+- To modify the PATH variable and make it easier to execute custom commands, you can add directories.
+- Example:
+  sysadmin@localhost:~$ PATH=/usr/bin/custom:$PATH
+  sysadmin@localhost:~$ echo $PATH
+- This prepends the /usr/bin/custom directory to the PATH variable.
+
+- You can also append directories to the PATH using colons as separators.
+
+The PATH variable is essential for locating and executing commands in the shell. Modifying it allows you to include custom directories for command execution.
