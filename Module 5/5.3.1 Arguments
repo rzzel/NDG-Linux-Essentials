@@ -1,0 +1,21 @@
+Command Format:
+
+A command is structured as: command [options] [arguments].
+Arguments are used to specify something for the command to act upon.
+Example with "ls" Command:
+
+When the "ls" command is given the name of a directory as an argument, it lists the contents of that directory.
+Example: ls /etc/ppp lists the files in the "/etc/ppp" directory.
+Multiple Arguments:
+
+Commands can accept multiple arguments.
+For instance, to list the contents of both the "/etc/ppp" and "/etc/ssh" directories, pass them both as arguments to the "ls" command:
+
+sysadmin@localhost:~$ ls /etc/ppp /etc/ssh
+/etc/ppp:
+ip-down.d  ip-up.d
+
+/etc/ssh:
+moduli               ssh_host_dsa_key.pub     ssh_host_rsa_key      sshd_configssh_config
+ssh_host_ecdsa_key   ssh_host_rsa_key.pub         
+ssh_host_dsa_key     ssh_host_ecdsa_key.pub   ssh_import_id
