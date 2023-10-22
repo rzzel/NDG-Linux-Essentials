@@ -1,0 +1,42 @@
+Environment Variables in the Bash Shell:
+
+- Environment variables, also known as global variables, are available system-wide.
+- They are accessible in all shells used by Bash when interpreting commands.
+- Environment variables are automatically recreated when a new shell is opened.
+
+Examples of Environment Variables:
+- Common examples include PATH, HOME, and HISTSIZE.
+- The HISTSIZE variable determines how many previous commands to store in the history list.
+
+Modifying Environment Variables:
+- To modify the value of an existing environment variable, use the assignment expression.
+- Example:
+  sysadmin@localhost:~$ HISTSIZE=500
+  sysadmin@localhost:~$ echo $HISTSIZE
+  - This sets HISTSIZE to 500 and displays the new value.
+
+Exporting Local Variables:
+- The "export" command is used to turn a local variable into an environment variable.
+- Example:
+  sysadmin@localhost:~$ export variable1
+  - This makes "variable1" an environment variable.
+
+Creating Environment Variables:
+- The "export" command can also be used when creating a variable to make it an environment variable.
+- Example:
+  sysadmin@localhost:~$ export variable2='Else'
+  - This creates "variable2" as an environment variable with the value 'Else'.
+
+Changing the Value of Environment Variables:
+- To change the value of an environment variable, use the assignment expression.
+- Example:
+  sysadmin@localhost:~$ variable1=$variable1' '$variable2
+  sysadmin@localhost:~$ echo $variable1
+  - This combines the values of "variable1" and "variable2."
+
+Removing Environment Variables:
+- Exported variables can be removed using the "unset" command.
+- Example:
+  sysadmin@localhost:~$ unset variable2
+
+Environment variables play a crucial role in configuring the behavior of the shell and various Linux commands system-wide.
