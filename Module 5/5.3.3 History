@@ -1,0 +1,27 @@
+Command History in the CLI:
+- Executed commands are stored in a history list for easy retrieval.
+- The Up Arrow (↑) displays previous commands, and Enter re-runs them.
+
+Cursor and Editing Keys:
+- Use Left Arrow (←) and Right Arrow (→) for cursor positioning.
+- Editing keys like Home, End, Backspace, and Delete are useful.
+
+Viewing Command History:
+- The `history` command displays the history list of commands.
+
+Executing Previous Commands:
+- Execute a specific command from history with `!` followed by the command's number (e.g., `!3`).
+
+Limiting History Display:
+- `history` command can show a specific number of previous commands (e.g., `history 3`).
+
+Executing Specific Commands:
+- Execute a command from the bottom of the history list with `!-n` (e.g., `!-3`).
+
+Repeating the Most Recent Command:
+- To run the most recent command, use `!!`.
+
+Repeating a Specific Command:
+- Execute the most recent iteration of a specific command with `!` followed by the command name (e.g., `!ls`).
+
+These notes provide an overview of accessing and executing previous commands from the command history in the CLI, including various navigation and repetition techniques.
