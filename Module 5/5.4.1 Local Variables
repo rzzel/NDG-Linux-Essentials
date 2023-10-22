@@ -1,0 +1,23 @@
+Local or Shell Variables in the Bash Shell:
+
+- Local or shell variables exist only within the current shell session and are not accessible to other commands or applications.
+- They are temporary and are lost when the shell session is closed.
+- These variables are often associated with user-based tasks and, by convention, are named in lowercase.
+
+Assigning Values to Local Variables:
+- To set the value of a local variable, use the assignment expression: variable=value.
+- If the variable already exists, its value is modified. If it doesn't exist, a new local variable is created and assigned the value.
+
+Example:
+sysadmin@localhost:~$ variable1='Something'
+- This creates a local variable named "variable1" with a value of "Something."
+
+Displaying the Value of Local Variables:
+- Use the "echo" command to display the value of a variable.
+- Prefix the variable name with a dollar sign ($) as an argument to the "echo" command.
+
+Example:
+sysadmin@localhost:~$ echo $variable1
+- This displays the value of "variable1," which is "Something."
+
+Local variables are useful for storing temporary data and configuration settings within a shell session.
