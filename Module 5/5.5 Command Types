@@ -1,0 +1,29 @@
+Understanding Command Sources with the "type" Command:
+
+- To learn more about a command and its source, you can use the "type" command.
+- The "type" command provides information about the type and origin of a command.
+
+Usage:
+type command
+
+Sources of Commands in the Shell:
+
+1. Internal Commands:
+   - Some commands are built into the shell and are referred to as internal commands.
+   - These commands are part of the shell's functionality and do not require external programs.
+
+2. External Commands:
+   - External commands are programs or scripts stored in directories listed in the PATH variable.
+   - They are executed by invoking external programs located in these directories.
+
+3. Aliases:
+   - Aliases are user-defined shortcuts for longer or complex commands.
+   - They are created using the "alias" command and allow users to customize command behavior.
+
+4. Functions:
+   - Functions are custom shell scripts or functions defined by users.
+   - They can be invoked like commands and are typically used for specific tasks.
+
+Using the "type" command helps identify the source of a command and provides insights into its behavior and origin.
+
+Understanding the source of a command is helpful for troubleshooting, customization, and learning about its functionality.
