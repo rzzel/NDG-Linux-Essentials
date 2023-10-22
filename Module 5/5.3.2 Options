@@ -1,0 +1,36 @@
+Command Format with Options:
+
+A command typically follows the format: command [options] [arguments].
+Options are used to expand or modify the way a command behaves.
+Example with "ls" Command and Options:
+
+The "ls" command, with the -l option, provides a long listing with detailed file information.
+
+sysadmin@localhost:~$ ls -l
+total 0
+drwxr-xr-x 1 sysadmin sysadmin 0 Jan 29  20:13 Desktop
+...
+Option Mnemonics:
+
+Options are often chosen to be mnemonic for their purpose. For example, -l is mnemonic for a long listing.
+Some options, like -r, reverse the default behavior. For instance, -r reverses the alphabetical order of listing.
+Combining Options:
+
+Options can be used separately, as in -l -r, or combined, as in -lr.
+Combined options do not have a specific order, and their output is the same.
+Human-Readable Format:
+
+Some commands, like "ls," offer human-readable format for file sizes, enabled with options like -h.
+Single-Letter vs. Full-Word Options:
+
+Older commands often use single letters for options (e.g., -h).
+
+Newer commands may use complete words or phrases as options.
+
+Single-letter options are preceded by a single dash -, while full-word options are preceded by two dashes --.
+
+Example with full-word option: ls --human-readable /usr/bin/perl
+
+
+sysadmin@localhost:~$ ls -l --human-readable /usr/bin/perl
+-rwxr-xr-x 2 root root 11K Feb  4  2018 /usr/bin/perl
