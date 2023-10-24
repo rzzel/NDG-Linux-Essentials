@@ -1,0 +1,124 @@
+# Software Components: Ownership, Money Transfer, Licensing
+
+## Ownership
+- **Definition:** Refers to the intellectual property ownership behind the software.
+- **Ownership in Practice:**
+  - **Microsoft Windows:** Owned by Microsoft Corporation.
+  - **Linux:** Owned by Linus Torvalds.
+
+## Money Transfer
+- **Definition:** The method by which money changes hands in acquiring the software.
+- **Money Transfer Models:**
+  - **Microsoft Windows:** Traditional purchase model, users pay for a license.
+  - **Linux:** Typically free to obtain; costs may be associated with support services.
+
+## Licensing
+- **Definition:** Specifies user rights, usage permissions, and restrictions.
+- **Licensing Models:**
+  - **Microsoft Windows:**
+    - Proprietary End User License Agreement (EULA).
+    - Users get a license to use the software, not ownership.
+    - Limited installations and restrictions on reverse engineering.
+  - **Linux:**
+    - GNU General Public License version 2 (GPLv2).
+    - Source code availability to anyone.
+    - Users can modify and redistribute under the same license.
+    - Prohibits charging for source code distribution beyond actual costs.
+
+## Contrasting Examples
+1. **Microsoft Windows:**
+   - **Ownership:** Microsoft Corporation owns intellectual property.
+   - **Money Transfer:** Traditional purchase model.
+   - **Licensing:** EULA, limited installations, no reverse engineering.
+
+2. **Linux:**
+   - **Ownership:** Linus Torvalds owns Linux.
+   - **Money Transfer:** Typically free; costs may relate to support.
+   - **Licensing:** GPLv2, source code availability, freedom to modify and redistribute.
+
+## Free and Open Source Software (FOSS)
+- **Definition:** Software where creators give up the right to control its use and distribution.
+- **Example:** Linux under GPLv2; users can view and redistribute the source code.
+- **Political Aspect:** Software licensing is a political issue, reflecting various views.
+- **Diversity of Licenses:**
+  - MIT, University of California, Apache Foundation, and Free Software Foundation have unique licenses.
+
+## Conclusion
+- **Influence on Open Source:**
+  - FSF and OSI are influential forces shaping the open source landscape.
+- **Philosophical vs. Practical:**
+  - FSF focuses on philosophical freedom with copyleft.
+  - OSI emphasizes practical benefits of open source for wider adoption.
+- **Evolution of Licenses:**
+  - Ongoing discussions, evident in changes between GPLv2 and GPLv3.
+- **Impact on the World:**
+  - From Stallman's desire to share software in 1983 to changing the world through legal tools.
+- **Divergent Views:**
+  - Divergence between FSF's strong philosophical stance and OSI's business-friendly approach.
+  - GPL licenses remain powerful instruments for preserving software freedom.
+
+# Internal Commands (Built-In Commands)
+
+## Definition
+- Internal commands, also known as built-in commands, are an integral part of a shell itself.
+- These commands are directly implemented within the shell, and the shell executes them without starting additional programs.
+
+## Example: `cd` (Change Directory)
+- **Description:** The `cd` command allows users to change their current working directory in the shell.
+- **Bash Shell:** `cd` is a built-in command in the Bash shell.
+- **Execution:** When a user types `cd`, the Bash shell interprets and executes it without the need for external programs.
+- **Efficiency:** Internal commands like `cd` are generally more efficient because they are part of the shell itself.
+
+## Identifying Internal Commands
+- The `type` command can be used to identify whether a command is an internal command or an external program.
+- For instance, to identify `cd` as an internal command:
+  ```bash
+  sysadmin@localhost:~$ type cd
+  cd is a shell builtin
+
+Advantages of Internal Commands
+Efficiency: Internal commands are executed faster than external programs because they are integrated into the shell.
+Availability: They are always available, irrespective of external programs or utilities.
+Common Internal Commands
+In addition to cd, many other shell-related operations and control commands are internal. These can include commands for manipulating variables, controlling flow, or performing basic file system operations.
+Conclusion
+Internal commands are a fundamental feature of shell environments like Bash.
+They enhance the efficiency and responsiveness of the shell by executing directly within it.
+Users can check whether a command is internal using the type command.
+External Commands
+Definition: External commands are binary executables stored in directories that are searched by the shell.
+
+Execution: When a user enters a command, the shell searches the directories listed in the PATH variable to find an executable with that name.
+
+Identifying Command Location: To find the location of a command or which version the shell is using, the which command is useful. Example:
+
+
+sysadmin@localhost:~$ which ls
+/bin/ls
+sysadmin@localhost:~$ which cal
+/usr/bin/cal
+Execution with Complete Path: External commands can be executed by specifying the complete path. Example:
+
+
+sysadmin@localhost:~$ /bin/ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+Using type Command: The type command displays the location of external commands. Example:
+
+
+sysadmin@localhost:~$ type cal
+cal is /usr/bin/cal
+Comparison of type and which Output: In some cases, the output of the type and which commands may differ. For example:
+
+
+sysadmin@localhost:~$ type echo
+echo is a shell builtin
+sysadmin@localhost:~$ which echo
+/bin/echo
+Displaying All Locations: Using the -a option with the type command shows all locations that contain the named command. Example:
+
+
+sysadmin@localhost:~$ type -a echo
+echo is a shell builtin
+echo is /bin/echo
+
+Purpose: Understanding the location of external commands is helpful for troubleshooting issues, ensuring the correct command is used, and managing command paths effectively.
