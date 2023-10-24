@@ -1,0 +1,24 @@
+Command Substitution with Backquotes (Backticks)
+
+- **Backquotes**, or **backticks**, are used for **command substitution** in Linux. This technique allows you to specify a command within another command, making it a powerful tool for more advanced command usage.
+
+- Here's an example to illustrate how command substitution works. Let's start with the output of the `date` command:
+
+```bash
+sysadmin@localhost:~$ date
+Mon Nov 4 03:35:50 UTC 2018
+Now, observe the output of the echo command:
+
+
+sysadmin@localhost:~$ echo Today is date
+Today is date
+In this command, the word date is treated as regular text, and the shell simply passes it to the echo command.
+
+To execute the date command and have its output sent to the echo command, you can use backquotes:
+
+
+sysadmin@localhost:~$ echo Today is `date`
+Today is Mon Nov 4 03:40:04 UTC 2018
+The backquotes around date indicate command substitution. The date command is executed, and its output is used within the echo command.
+
+Command substitution with backquotes is a valuable feature for building complex commands and scripts.
