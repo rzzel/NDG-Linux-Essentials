@@ -1,0 +1,25 @@
+Internal Commands (Built-In Commands)
+Definition
+Internal commands, also known as built-in commands, are an integral part of a shell itself.
+These commands are directly implemented within the shell, and the shell executes them without starting additional programs.
+Example: cd (Change Directory)
+Description: The cd command allows users to change their current working directory in the shell.
+Bash Shell: cd is a built-in command in the Bash shell.
+Execution: When a user types cd, the Bash shell interprets and executes it without the need for external programs.
+Efficiency: Internal commands like cd are generally more efficient because they are part of the shell itself.
+Identifying Internal Commands
+The type command can be used to identify whether a command is an internal command or an external program.
+For instance, to identify cd as an internal command:
+
+sysadmin@localhost:~$ type cd
+cd is a shell builtin
+
+Advantages of Internal Commands
+Efficiency: Internal commands are executed faster than external programs because they are integrated into the shell.
+Availability: They are always available, irrespective of external programs or utilities.
+Common Internal Commands
+In addition to cd, many other shell-related operations and control commands are internal. These can include commands for manipulating variables, controlling flow, or performing basic file system operations.
+Conclusion
+Internal commands are a fundamental feature of shell environments like Bash.
+They enhance the efficiency and responsiveness of the shell by executing directly within it.
+Users can check whether a command is internal using the type command.
