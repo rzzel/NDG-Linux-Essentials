@@ -1,0 +1,18 @@
+Using Logical "OR" with Double Pipe (||) in Linux
+
+- The double pipe (||) in Linux acts as a logical "or" operator. It allows you to run the second command if the first command fails. If the first command is successful, the second command is skipped.
+
+- In other words, you're telling the shell, "Either run this first command or the second one."
+
+- With the double pipe, the behavior is as follows: if the first command runs successfully, the second command is skipped; if the first command fails, then the second command is executed.
+
+- In the following example, the `echo` command only executes if the `ls` command fails:
+
+```bash
+**sysadmin@localhost:~$ ls /etc/ppp || echo failed**
+ip-down.d  ip-up.d
+
+**sysadmin@localhost:~$ ls /etc/junk || echo failed**
+ls: cannot access /etc/junk: No such file or directory
+failed
+Using the double pipe (||) is a way to conditionally execute commands based on the success or failure of the preceding command.
