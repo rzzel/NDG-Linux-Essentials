@@ -1,0 +1,8 @@
+Control Statements in Linux
+
+- **Control statements** in Linux allow you to execute multiple commands at once or run additional commands based on the success or failure of a previous command. These statements are essential for scripting and can also be used on the command line.
+
+- Control statements provide a way to make decisions, repeat actions, and create more sophisticated command sequences.
+
+- They are particularly valuable in shell scripting to automate tasks and handle complex workflows.
+
