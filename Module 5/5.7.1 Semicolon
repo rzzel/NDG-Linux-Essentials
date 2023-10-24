@@ -1,0 +1,13 @@
+Running Multiple Commands with Semicolon (;)
+
+- The semicolon (;) character in Linux can be used to run multiple commands one after the other. Each command runs independently and consecutively. Regardless of the result of the first command, the second command runs once the first has completed, followed by the third, and so on.
+
+- This is a straightforward way to execute a sequence of commands in a single line.
+
+- For example, to print the calendars for the months of January, February, and March of 2030, you can use the following command:
+
+```bash
+**cal 1 2030; cal 2 2030; cal 3 2030**
+The cal command for each month is executed in succession, producing the calendar outputs for each month.
+
+Using semicolons is a quick way to execute a series of commands sequentially.
