@@ -1,0 +1,21 @@
+Single Quotes in Linux and Special Characters
+
+- Single quotes are used in Linux to enclose text and prevent the shell from interpreting any special characters, including:
+  - Glob characters (wildcards).
+  - Variables.
+  - Command substitution.
+  - Other metacharacters not discussed here.
+
+- Single quotes make the enclosed text completely literal, treating every character within them as is, without any interpretation.
+
+- For example, to display the dollar sign ($) as a dollar sign and not as a variable indicator, use single quotes:
+
+  ```bash
+  **echo 'The car costs $100'**
+
+
+In the second command, the dollar sign is treated as a literal character, not as a variable placeholder.
+
+Single quotes are useful when you want to ensure that the enclosed text is treated exactly as written.
+
+They are particularly handy for preventing variable expansion and preserving the original text.
