@@ -1,0 +1,25 @@
+Escaping Special Characters with Backslash
+
+- An alternative technique to single-quoting a single character is to use a backslash `\` character to prevent the shell from interpreting a special character.
+
+- In some cases, you may want to use a mixture of variables and literal text in a sentence.
+
+- For example, consider this message:
+
+The service costs $1 and the path is $PATH
+
+
+
+- If this sentence is placed in double quotes, $1 and $PATH are considered variables:
+
+```bash
+**echo "The service costs $1 and the path is $PATH"**
+If placed in single quotes, $1 and $PATH are not considered variables:
+
+**echo 'The service costs $1 and the path is $PATH'**
+What if you want to have $PATH treated as a variable and $1 not? In this case, use a backslash \ character in front of the dollar sign $ to prevent the shell from interpreting it. The command below demonstrates using the \ character:
+
+**echo The service costs \$1 and the path is $PATH**
+The backslash \ makes the $ character a literal dollar sign, and only $1 is treated as a variable.
+
+This technique is useful when you need a mix of literal text and variable values in your command.
