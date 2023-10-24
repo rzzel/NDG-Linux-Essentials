@@ -1,0 +1,27 @@
+Double Quotes in Linux and Special Characters
+
+- **Double quotes** are used in Linux to enclose text and affect the way special characters, also known as metacharacters, are treated by the shell.
+
+- Special characters, including **glob characters**, have special meanings to the shell and are interpreted before any command execution. Glob characters include:
+  - Asterisk (*) for matching multiple characters.
+  - Question mark (?) for matching a single character.
+  - Brackets [] for character range or set.
+
+- Double quotes prevent the shell from interpreting these metacharacters, treating them as regular characters. This can be useful when you want to display characters that are usually special to the shell.
+
+- For example, when text is enclosed in double quotes, the Bash shell won't convert glob patterns into filenames:
+
+  ```bash
+  sysadmin@localhost:~$ echo "The glob characters are *, ? and [ ]"
+  The glob characters are *, ? and [ ]
+Double quotes still allow for:
+
+Command substitution.
+Variable substitution.
+Use of some other shell metacharacters (not discussed here).
+In the example, the value of the PATH variable is displayed within double quotes without any issues:
+
+
+sysadmin@localhost:~$ echo "The path is $PATH"
+The path is /usr/bin/custom:/home/sysadmin/bin:/usr/local/sbin:/usr/local/b
+Double quotes are a valuable tool in shell scripting for controlling how special characters and variables are treated.
