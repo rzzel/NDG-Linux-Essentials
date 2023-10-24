@@ -1,0 +1,48 @@
+Functions in Shell
+
+- **Definition:** Functions in shell scripting are used to create custom commands that execute multiple commands or sequences of actions.
+- **Usage:** Functions are typically used in Bash shell scripts and provide a way to encapsulate a set of commands.
+
+## Creating a Function
+
+- To create a function, use the following syntax:
+  ```bash
+  function_name () 
+  {
+     commands
+  }
+function_name: Name for the custom function.
+
+commands: The series of shell commands or actions to be executed within the function.
+
+Functions are typically defined in shell initialization files.
+
+Example: Creating a Function
+Example function named my_report:
+
+
+sysadmin@localhost:~$ my_report () {                                            
+> ls Documents                                                                  
+> date                                                                          
+> echo "Document directory report"                                              
+> }  
+The > character appears as a prompt to enter commands for the function.
+
+Curly braces {} are used to indicate the start and end of the function, which helps the shell recognize the function definition.
+
+Using a Function
+Once a function is created, you can invoke it from the shell prompt:
+
+sysadmin@localhost:~$ my_report
+The function executes the defined commands in the order they are listed.
+
+Functions are particularly useful for automating sequences of commands and avoiding repetitive typing.
+
+Benefits of Functions
+Functions allow for code reusability and organization.
+
+Functions can encapsulate complex operations, making scripts more modular and easier to read.
+
+They help in managing and automating tasks effectively.
+
+For more advanced scripting and automation, functions are a powerful tool in the shell.
