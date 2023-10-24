@@ -1,0 +1,19 @@
+# Aliases in Shell
+
+- **Definition:** An alias is used to map longer commands to shorter key sequences in a shell.
+- **Purpose:** Aliases save time by providing shortcuts for frequently used commands.
+
+## Viewing Existing Aliases
+
+- To see the aliases set on the current shell, use the `alias` command. Example:
+
+  ```bash
+  sysadmin@localhost:~$ alias
+  alias egrep='egrep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias grep='grep --color=auto'
+  alias l='ls -CF'
+  alias la='ls -A'
+  alias ll='ls -alF'
+  alias ls='ls --color=auto'
+  ``
