@@ -1,0 +1,27 @@
+Instead of using info documentation to look up information about a specific command or feature, consider exploring the capabilities of Linux by reading through the info documentation. Execute the info command without any arguments to be taken to the top level of the documentation. This is a good starting point to explore many of the features offered:
+
+File: dir,      Node: Top,      This is the top of the INFO tree.
+
+This is the Info main menu (aka directory node).
+A few useful Info commands:
+
+'q' quits;
+'H' lists all Info commands;
+'h' starts the Info tutorial;
+'mTexinfo RET' visits the Texinfo manual, etc.
+
+* Menu:
+
+Basics
+* Common options: (coreutils)Common options.
+* Coreutils: (coreutils).       Core GNU (file, text, shell) utilities.
+* Date input formats: (coreutils)Date input formats.
+* File permissions: (coreutils)File permissions.
+                                Access modes.
+* Finding files: (find).        Operating on files matching certain criteria.
+
+C++ libraries
+* autosprintf: (autosprintf).   Support for printf format strings in C++.
+
+-----Info: (dir)Top, 211 lines --Top--------------------------------------------
+Welcome to Info version 6.5.  Type H for help, h for tutorial.
