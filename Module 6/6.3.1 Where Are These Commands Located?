@@ -1,0 +1,14 @@
+The `whereis` command is used to search for the location of a command or the associated man pages. It searches specific locations where these files are typically stored.
+
+For example:
+sysadmin@localhost:~$ whereis ls
+ls: /bin/ls /usr/share/man/man1p/ls.1.gz /usr/share/man/man1/ls.1.gz
+
+Here's what the output means:
+- /bin/ls: This is the location of the `ls` command.
+- /usr/share/man/man1p/ls.1.gz: This is a compressed man page for the `ls` command, located in section 1p.
+- /usr/share/man/man1/ls.1.gz: This is the primary compressed man page for the `ls` command, located in section 1.
+
+Man pages are easily distinguishable from commands as they are typically compressed with gzip, resulting in a filename ending with .gz. Multiple man pages for the same command may exist, usually when different versions or sections of documentation are available.
+
+While `whereis` is a useful tool to find command locations and associated man pages, the `man` command is typically used to access and read the man pages for more detailed information.
