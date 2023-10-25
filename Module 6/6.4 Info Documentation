@@ -1,0 +1,9 @@
+Man pages are individual documents, each unrelated to any other man page. While they may have a "SEE ALSO" section referring to other man pages, they are generally independent sources of documentation.
+
+The info command provides documentation with a different goal: to create a structured and logically organized resource for easier documentation reading.
+
+Info documents combine all documentation into a single "book" representing all available documentation. Within info documents, information is categorized like a table of contents in a book. Hyperlinks are provided for quick navigation to individual topics within a specific command or feature.
+
+Info documents often have a writing style that is more conducive to learning, making them suitable as learning guides, while man pages are typically seen as reference resources.
+
+Info pages are particularly useful when you want to understand a topic comprehensively and learn about related concepts in a structured manner.
