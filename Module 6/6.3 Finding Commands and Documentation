@@ -1,0 +1,12 @@
+The `whatis` command (or `man -f`) returns the section where a man page is stored. Sometimes it may show multiple commands with the same name and different sections. This situation arises from UNIX having two main variants, leading to parallel development of commands with the same name but different behaviors on different UNIX variants.
+
+Here's an example:
+sysadmin@localhost:~$ whatis ls
+ls (1) - list directory contents
+ls (lp) - list directory contents
+
+When you type a command with multiple versions, which one is executed depends on your system's configuration. In most cases, the command in the section with the highest priority is executed by default. In the given example, running `ls` executes the command in section 1.
+
+To explicitly use a command from a specific section, specify the section number with the `man` command, e.g., `man 1 ls` or `man lp ls`.
+
+Please note that the actual sections and behaviors may vary between different UNIX-like operating systems and Linux distributions.
