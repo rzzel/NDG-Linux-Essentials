@@ -1,0 +1,17 @@
+NAME: Provides the command name and a brief description.
+
+SYNOPSIS: Offers examples of how the command is executed, including optional features and combinations.
+
+DESCRIPTION: Provides a detailed explanation of the command's functionality.
+
+OPTIONS: Lists the available options for the command and their descriptions.
+
+FILES: Lists files associated with the command, often used for configuration.
+
+AUTHOR: Provides the name of the man page author and contact information, if available.
+
+REPORTING BUGS: Explains how to report problems or bugs related to the command.
+
+COPYRIGHT: Includes basic copyright and licensing information.
+
+SEE ALSO: Suggests where to find additional related information and commands.
