@@ -1,0 +1,19 @@
+Viewing Manual Pages with the "man" Command
+
+- To view a manual page for a command, you can use the "man" command. The basic syntax is:
+
+```bash
+man command
+For example, to view the manual page for the "ls" command, you can use the following command:
+
+sysadmin@localhost:~$ man ls
+
+Once you've accessed a man page, you can navigate through it using the arrow keys to scroll up and down.
+
+To exit from viewing a man page, simply press the "Q" key.
+
+The "man" command uses a pager to display documents. The pager is typically "less" or "more," depending on your Linux distribution. Both of these pager commands are used to display text documents.
+
+You can access a help page displaying various movement commands within the pager by pressing the "H" key while viewing a man page.
+
+Pagers and their functionalities will be discussed in more detail later in the course.
