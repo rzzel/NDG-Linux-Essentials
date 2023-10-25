@@ -1,0 +1,46 @@
+The whereis command is specifically designed to find commands and man pages. While this is useful, it is often necessary to find a file or directory, not just files that are commands or man pages.
+
+To find any file or directory, use the locate command. This command searches a database of all files and directories that were on the system when the database was created. Typically, the command to generate this database is run nightly.
+
+Example of using locate to find 'gshadow':
+sysadmin@localhost:~$ locate gshadow                                   
+/etc/gshadow                                                           
+/etc/gshadow-                                                          
+/usr/include/gshadow.h                                                
+/usr/share/man/cs/man5/gshadow.5.gz                                   
+/usr/share/man/da/man5/gshadow.5.gz                                    
+/usr/share/man/de/man5/gshadow.5.gz                                    
+/usr/share/man/fr/man5/gshadow.5.gz                                    
+/usr/share/man/it/man5/gshadow.5.gz                                    
+/usr/share/man/man5/gshadow.5.gz                                       
+/usr/share/man/ru/man5/gshadow.5.gz                                   
+/usr/share/man/sv/man5/gshadow.5.gz                                    
+/usr/share/man/zh_CN/man5/gshadow.5.gz                                 
+
+Any files created today will not be searchable with the locate command. If root access is available, it’s possible to update the locate database manually by running the updatedb command. Regular users cannot update the database file.
+
+Also note that when using the locate command as a regular user, the output may be limited due to file permissions. If the user that is logged in doesn’t have access to a file or directory on the filesystem due to permissions, the locate command won't return those names. This security feature is designed to keep users from "exploring" the filesystem by using the locate database. The root user can search for any file in the locate database.
+
+The output of the locate command can be quite large. When searching for a filename, such as passwd, the locate command produces every file that contains the string passwd, not just files named passwd.
+
+In many cases, it is helpful to start by finding out how many files match. Do this by using the -c option to the locate command:
+
+Example: Count files matching 'passwd'
+sysadmin@localhost:~$ locate -c passwd
+98
+
+To limit the output produced by the locate command, use the -b option. This option only includes listings that have the search term in the basename of the filename. The basename is the portion of the filename not including the directory names.
+
+Example: Limit output to filenames with 'passwd' in the basename
+sysadmin@localhost:~$ locate -c -b passwd
+83
+
+As you can see from the previous output, there will still be many results when the -b option is used. To limit the output even further, place a \ character in front of the search term. This character limits the output to filenames that exactly match the term:
+
+Example: Limit output to exact filename match
+sysadmin@localhost:~$ locate -b "\passwd"
+/etc/passwd                                                                     
+/etc/pam.d/passwd                                                               
+/usr/bin/passwd                                                                 
+/usr/share/doc/passwd                                                           
+/usr/share/lintian/overrides/passwd
