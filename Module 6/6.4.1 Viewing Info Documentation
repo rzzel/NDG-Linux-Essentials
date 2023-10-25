@@ -1,0 +1,18 @@
+
+Here are the notes for displaying and navigating Info documentation:
+
+To display Info documentation for a command, use the info command followed by the command's name, like info ls.
+
+The Info documentation provides a structured and navigable view of information.
+
+Within Info documents, information is categorized like a table of contents in a book. You can navigate using the arrow keys.
+
+The document is divided into nodes, similar to chapters in a book. Each node covers a specific aspect of the command.
+
+At the top of the document, there's an index indicating the current location in the document. For example, "ls invocation" is the current node.
+
+The Info document includes a menu listing topics such as "Which files are listed," "What information is listed," "Sorting the output," etc. These items are hyperlinks to specific nodes that provide detailed information about the command.
+
+You can move to a different topic by selecting it in the menu and pressing Enter.
+
+Navigating deeper into a topic leads to sub-nodes. You can return to the previous node using the U key or navigate back to the same location with the L key.
