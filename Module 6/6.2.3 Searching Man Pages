@@ -1,0 +1,5 @@
+To search a man page for a term, use the / character followed by the search term, and press Enter.
+The program searches from the current location down to the bottom of the page.
+If a match is found, it will be highlighted.
+To navigate between multiple matches, press 'n' to move to the next match and 'Shift+N' to go back to a previous match.
+If the search term is not found, or after reaching the end of matches, the program will report "Pattern not found (press Return)."
