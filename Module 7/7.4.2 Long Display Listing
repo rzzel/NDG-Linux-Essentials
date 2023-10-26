@@ -1,0 +1,43 @@
+File Metadata and "ls -l" Command
+Each file has details associated with it called metadata. This can include information such as the size, ownership, or timestamps. To view this information, use the "-l" option with the "ls" command. Here's an example listing of the /var/log directory:
+
+sysadmin@localhost:~$ ls -l /var/log/
+total 900
+-rw-r--r-- 1 root   root  15322 Dec 10 21:33 alternatives.log
+drwxr-xr-x 1 root   root   4096 Jul 19 06:52 apt
+...
+
+In the output above, each line displays metadata about a single file. Here's an explanation of each field in the output of the "ls -l" command:
+
+1. File Type:
+   - The first character indicates the type of file.
+   - File types include directories (d), regular files (-), symbolic links (l), sockets (s), pipes (p), block files (b), and character files (c).
+
+2. Permissions:
+   - The next nine characters indicate the permissions of the file.
+   - Permissions specify how users can access the file.
+
+3. Hard Link Count:
+   - This number shows how many hard links point to this file.
+
+4. User Owner:
+   - Every file is owned by a user account. The owner can set permissions on the file.
+
+5. Group Owner:
+   - Indicates which group owns the file. Group members have specific permissions on the file.
+
+6. File Size:
+   - Shows the size of the file in bytes.
+   - For directories, this value represents the space used to track filenames, not the total directory size.
+
+7. Timestamp:
+   - Indicates the time the file's contents were last modified.
+   - For directories, it shows the last time a file was added or deleted.
+
+8. File Name:
+   - The final field contains the name of the file or directory.
+   - For symbolic links, the link name is displayed with an arrow (->) followed by the pathname of the original file.
+
+File permissions, ownership, and hard links will be covered in detail later in the course.
+
+You can copy and save this content as your notes. If you have more information or questions, please let me know.
