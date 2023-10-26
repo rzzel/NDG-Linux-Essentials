@@ -1,0 +1,25 @@
+To navigate the filesystem, use the `cd` (change directory) command.
+
+
+cd [options] [path]
+If you provide a directory name as an argument to the cd command, it will take you to that directory. For example:
+
+sysadmin@localhost:~$ cd Documents
+sysadmin@localhost:~/Documents$
+
+This command moves the user from the home directory to the "Documents" directory.
+
+When used with no arguments, cd will take the user to their home directory. For example:
+
+sysadmin@localhost:~/Documents$ cd
+sysadmin@localhost:~$
+
+This command takes you to your home directory, and the tilde (~) character represents your home directory.
+
+If you try to change to a directory that does not exist, the cd command returns an error message:
+
+sysadmin@localhost:~$ cd Junk
+-bash: cd: Junk: No such file or directory
+Remember that the cd command is used to change your current working directory in the terminal. It's a fundamental command for navigating the Linux filesystem.
+
+arduino
