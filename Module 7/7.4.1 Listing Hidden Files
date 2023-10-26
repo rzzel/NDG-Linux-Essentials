@@ -1,0 +1,13 @@
+Hidden Files and the "ls" Command
+When the "ls" command is used to display the contents of a directory, not all files are shown automatically. The "ls" command omits hidden files by default. A hidden file is any file (or directory) that begins with a dot (.) character.
+
+To display all files, including hidden files, use the "-a" option with the "ls" command:
+
+sysadmin@localhost:~$ ls -a
+.             .bashrc   .selected_editor  Downloads  Public
+..            .cache    Desktop           Music      Templates
+.bash_logout  .profile  Documents         Pictures   Videos
+
+Why are files hidden in the first place? Most of the hidden files are customization files, designed to customize how Linux, your shell, or programs work. For example, the ".bashrc" file in the home directory customizes features of the shell, such as creating or modifying variables and aliases.
+
+These customization files are not ones that you work with on a regular basis, and having them displayed makes it more difficult to find other files.
