@@ -1,0 +1,17 @@
+There are times when you want to display all of the files in a directory as well as all of the files in all subdirectories under that directory. This is known as a recursive listing.
+
+To perform a recursive listing, you can use the "-R" option with the "ls" command. Here's an example:
+
+sysadmin@localhost:~$ ls -R /etc/ppp
+/etc/ppp:
+ip-down.d  ip-up.d         
+
+/etc/ppp/ip-down.d:
+bind9
+
+/etc/ppp/ip-up.d:
+bind9
+In the example above, the files in the /etc/ppp directory were listed first. After that, the contents of its subdirectories, /etc/ppp/ip-down.d and /etc/ppp/ip-up.d, were listed as well.
+
+However, it's important to use this option with caution. Running the recursive listing on a large directory structure, especially the root directory, would list every file on the file system, including those on attached USB devices and DVDs. It's recommended to limit the use of recursive listings to smaller directory structures.
+
