@@ -1,0 +1,9 @@
+Absolute paths allow the user to specify the exact location of a directory. It always starts at the root directory, and therefore it always begins with the / character. The path /home/sysadmin is an absolute path; it tells the system to begin at the root / directory, move into the home directory, and then into the sysadmin directory.
+
+If the path /home/sysadmin is used as an argument to the cd command, it moves the user into the home directory for the sysadmin user.
+
+sysadmin@localhost:~/Documents$ cd /home/sysadmin
+Again, no output means the command succeeded. This can be confirmed by looking at the prompt, or using the pwd command:
+
+sysadmin@localhost:~$ pwd
+/home/sysadmin
