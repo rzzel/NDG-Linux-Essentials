@@ -1,0 +1,6 @@
+The argument to the cd command is more than just the name of a directory, it is actually a path. A path is a list of directories separated by the / character. If you think of the filesystem as a map, paths are the directory addresses, which include step-by-step navigation directions; they can be used to indicate the location of any file within the filesystem.
+
+For example, /home/sysadmin is a path to the home directory:
+
+/home/sysadmin is a path to the home directory of the sysadmin user. This is like step-by-step navigation directions. To get to the sysadmin directory begin at the root directory (symbolized by the / character). Next move to the directory called home. Finally, move to the directory called sysadmin. You have arrived at your destination.
+There are two types of paths: absolute and relative.
