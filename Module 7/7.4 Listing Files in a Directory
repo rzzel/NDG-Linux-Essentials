@@ -1,0 +1,24 @@
+The "ls" Command
+The "ls" command is used to display the contents of a directory and can provide detailed information about the files. By default, when it is used with no options or arguments, it lists the files in the current directory:
+
+sysadmin@localhost:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+
+The "ls" command can also be used to list the contents of any directory in the filesystem. Provide the path to the directory as an argument:
+
+sysadmin@localhost:~$ ls /var
+backups  cache  lib  local  lock  log  mail  opt  run  spool  tmp
+
+Note: On many Linux distributions, including the one used in our virtual machines, the "ls" command uses color to distinguish file types. For example, directories may be displayed in blue, executable files in green, and symbolic links in cyan.
+
+Colored output is not the default behavior for the "ls" command, but rather the effect of the "--color" option. The "ls" command seems to perform this coloring automatically because there is an alias for the "ls" command, so it runs with the "--color" option. 
+
+sysadmin@localhost:~$ type ls
+ls is aliased to `ls --color=auto'
+
+To avoid using the alias, place a backslash character "\" in front of your command:
+
+sysadmin@localhost:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+sysadmin@localhost:~$ \ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
