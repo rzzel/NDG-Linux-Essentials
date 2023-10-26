@@ -1,0 +1,13 @@
+
+
+The "-l" option to the ls command displays file sizes in bytes. While this is suitable for smaller files, it can be challenging to comprehend the size of larger files. To make file sizes more human-readable, you can use the "-h" option with the "ls" command.
+
+For example:
+sysadmin@localhost:~$ ls -lh /var/log/lastlog
+-rw-rw-r-- 1 root utmp 286K Dec 15 16:38 /var/log/lastlog
+
+In this example, the "-lh" option combination provides a more human-friendly representation of the file size in kilobytes (K). This is much easier to understand than raw byte sizes.
+
+It's important to note that the "-h" option should be used alongside the "-l" option to get human-readable file sizes.
+
+Feel free to add this information to your notes. If you have further questions or need more details, please let me know.
