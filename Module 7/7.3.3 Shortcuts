@@ -1,0 +1,15 @@
+The ".." Characters
+Regardless of which directory the user is in, two period ".." characters always represent one directory higher relative to the current directory, sometimes referred to as the parent directory. To move from the Art directory back to the School directory:
+
+sysadmin@localhost:~/Documents/School/Art$ cd ..
+sysadmin@localhost:~/Documents/School$ 
+
+The double dot can also be used in longer paths as well. The following relative path could be used to move from the School directory to the Downloads directory:
+
+The starting point for the next example is the School directory located in the Documents directory, which is located in the sysadmin directory. The destination is the Downloads directory located in the sysadmin directory.
+
+sysadmin@localhost:~/Documents/School$ cd ../../Downloads
+sysadmin@localhost:~/Downloads$
+
+The "." Character
+Regardless of which directory the user is in, the single period "." character always represents the current directory. For the "cd" command, this shortcut is not very useful, but it comes in handy for commands covered in subsequent sections.
