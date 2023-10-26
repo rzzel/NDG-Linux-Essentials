@@ -1,0 +1,13 @@
+Relative paths start from the current directory. A relative path gives directions to a file relative to the current location in the filesystem. They do not start with the / character. Instead, they start with the name of a directory. More specifically, relative paths start with the name of a directory contained within the current directory.
+
+Take another look at the first cd command example. The argument is an example of the simplest relative path: the name of a directory within the current working directory.
+
+sysadmin@localhost:~$ cd Documents
+sysadmin@localhost:~/Documents$ 
+
+If the user is located in the Documents directory, the relative path School/Art moves them to the School directory contained within the Documents directory, then to the Art directory contained within the School directory.
+
+Use the pwd command to confirm the change:
+
+sysadmin@localhost:~/Documents/School/Art$ pwd
+/home/sysadmin/Documents/School/Art
