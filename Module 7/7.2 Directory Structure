@@ -1,0 +1,12 @@
+Like Windows, the Linux directory structure, typically called a filesystem, also has a top level. However, instead of "My Computer," it is called the root directory and is symbolized by the slash (/) character. Additionally, there are no drives in Linux; each physical device is accessible under a directory, as opposed to a drive letter.
+
+The Filesystem Hierarchy Standard defines four hierarchies of directories used in organizing the files of the filesystem. The root directory is the top level of the Linux system, serving as the first hierarchy. It contains the following directories: /bin, /boot, /dev, /etc, /home, /lib, /lib64, /media, /mnt, /opt, /proc, /root, /sbin, /srv, /sys, /tmp, /usr, and /var. The second and third hierarchies, located under the /usr and /usr/local directories, repeat the pattern of many of the key directories found under the first hierarchy or root filesystem. The fourth hierarchy, the /var directory, also repeats some of the top-level directories such as lib, opt, and tmp.
+
+To view the contents of the root directory, use the ls command with the / character as the argument:
+
+sysadmin@localhost:~$ ls /
+ bin    etc    lib     mnt    root  'sbin'$'\342\200\214'   tmp                 
+ boot   home   lib64   opt    run    srv                    usr                 
+ dev    init   media   proc   sbin   sys                    var
+
+This directory structure is fundamental to Linux systems, and it serves as the basis for organizing files, configurations, and system resources. If you have any further questions or need more information, feel free to ask.
