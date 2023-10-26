@@ -1,0 +1,11 @@
+To determine where the user is currently located within the filesystem, the `pwd` (print working directory) command can be used:
+
+```shell
+pwd [OPTIONS]
+For example:
+
+
+sysadmin@localhost:~$ pwd
+/home/sysadmin
+
+The pwd command prints the working directory, which is the current location of the user within the filesystem. The output of the above command indicates that the sysadmin user is currently in their home directory.
