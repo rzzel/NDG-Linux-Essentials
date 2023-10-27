@@ -1,0 +1,11 @@
+Like the cp command, the mv command provides the following options:
+
+‌⁠​​⁠​
+Option	Meaning
+-i	Interactive: Ask if a file is to be overwritten.
+-n	No Clobber: Do not overwrite a destination file's contents.
+-v	Verbose: Show the resulting move.
+
+Important
+
+There is no -r option as the mv command moves directories by default.
