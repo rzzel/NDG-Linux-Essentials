@@ -1,0 +1,23 @@
+To delete files in Linux, you can use the rm (remove) command. It's important to note that the rm command deletes files without any confirmation, which means the files are permanently removed and cannot be easily recovered. Here's how you can use the rm command:
+
+To remove a single file:
+
+rm filename
+
+For example, to remove a file named "sample":
+
+rm sample
+
+To remove multiple files using glob patterns with the -i (interactive) option:
+
+rm -i pattern
+
+For example, if you have files like "sample.txt," "example.txt," and "test.txt" and want to delete all files with the ".txt" extension while being prompted for each file:
+
+
+touch sample.txt example.txt test.txt
+rm -i *.txt
+
+The -i option prompts you for confirmation before deleting each file. You can respond with "y" for yes or "n" for no. This helps prevent accidental deletions when working with multiple files.
+
+Remember that once a file is deleted using the rm command, it cannot be recovered, so use it with caution.
