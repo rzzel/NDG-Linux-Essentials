@@ -1,0 +1,6 @@
+The cat command, short for concatenate, is a simple but useful command whose functions include creating and displaying text files, as well as combining copies of text files. One of the most popular uses of cat is to display the content of text files. To display a file in the standard output using the cat command, type the command followed by the filename:
+
+sysadmin@localhost:~$ cd Documents
+sysadmin@localhost:~/Documents$ cat food.txt 
+Food is good.
+Although the terminal is the default output of this command, the cat command can also be used for redirecting file content to other files or input for another command by using redirection characters.
