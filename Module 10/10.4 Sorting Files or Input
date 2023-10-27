@@ -1,0 +1,20 @@
+The sort command can be used to rearrange the lines of files or input in either dictionary or numeric order. The following example creates a small file, using the head command to grab the first 5 lines of the /etc/passwd file and send the output to a file called mypasswd.
+
+sysadmin@localhost:~$ head -5 /etc/passwd > mypasswd
+sysadmin@localhost:~$ cat mypasswd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+
+Now we will sort the mypasswd file:
+
+sysadmin@localhost:~$ sort mypasswd
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+root:x:0:0:root:/root:/bin/bash
+sync:x:4:65534:sync:/bin:/bin/sync
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+
+Upon close examination of the output in the preceding example, the sort command has arranged the lines of the file in alphabetical order. Compare this output to the output of the previous cat command.
