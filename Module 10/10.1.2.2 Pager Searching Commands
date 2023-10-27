@@ -1,0 +1,24 @@
+There are two ways to search in the less command: searching forward or backward from your current position.
+
+To start a search to look forward from your current position, use the slash / key. Then, type the text or pattern to match and press the Enter key.
+
+Abdul
+Abdul's
+Abe
+/frog
+If a match can be found, then the cursor moves in the document to the match. For example, in the following graphic the expression "frog" was searched for in the words file:
+
+bullfrog
+bullfrog's
+bullfrogs
+bullheaded
+bullhorn
+bullhorn's
+Notice that "frog" didn't have to be a word by itself. Also notice that while the less command moved to the first match from the current position, all matches were highlighted.
+
+If no matches forward from your current position can be found, then the last line of the screen will report Pattern not found:
+
+Pattern not found (press RETURN)
+To search backward from your current position, press the question mark ? key, then type the text or pattern to match and press the Enter key. The cursor moves backward to the first match it can find or reports that the pattern cannot be found.
+
+If more than one match can be found by a search, then use the n key to move the next match and use the Shift+N key combination to go to a previous match.
