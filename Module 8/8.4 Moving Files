@@ -1,0 +1,15 @@
+The mv command is used to move files from one location to another. Its syntax is similar to the cp command:
+
+
+mv source destination
+
+For example, to move a file named "hosts" from the current directory to a directory called "Videos," you can use:
+
+
+mv hosts Videos
+
+When a file is moved using mv, it is removed from its original location and placed in the new destination. This can be useful for organizing files or changing their locations.
+
+However, it's important to note that moving files in Linux may require specific permissions. If you don't have the necessary permissions to remove files from a directory, you will receive a "Permission denied" error when attempting to move the file.
+
+Understanding and managing permissions in Linux is essential for successfully performing file operations. You'll learn more about permissions and other file management techniques as you progress in your Linux knowledge.
