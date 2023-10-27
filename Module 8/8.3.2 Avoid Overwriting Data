@@ -1,0 +1,21 @@
+The cp command can indeed be destructive when used to copy files to an existing destination. If the destination file already exists, the cp command will overwrite the existing file's contents with the contents of the source file. This can lead to data loss if not used carefully.
+
+To avoid accidental overwrites, you have a couple of options, as you mentioned:
+
+Interactive Prompt (-i): You can use the -i option with the cp command, which makes it prompt you before overwriting an existing file. For example:
+
+
+cp -i /etc/hosts example.txt
+
+This will ask you for confirmation (y for yes, n for no) before overwriting the file. It provides a safety net against accidental data loss.
+
+No Clobber Option (-n): The -n option, which stands for "no clobber," prevents the cp command from overwriting an existing file. If a file with the same name already exists in the destination, cp will not copy the source file. For example:
+
+
+cp -n /etc/hosts example.txt
+
+In this case, it won't overwrite example.txt.
+
+However, be cautious with the -n option when you intend to update an existing file with a newer version. If you use -n and the destination file exists, the copy operation will be skipped, and you won't get the updated content.
+
+You can choose the option that best suits your needs based on the specific situation. If you're copying important files or making backups, it's a good practice to use these options to prevent data loss.
