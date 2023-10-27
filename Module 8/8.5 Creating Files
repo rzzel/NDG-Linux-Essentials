@@ -1,0 +1,17 @@
+You can create an empty file in Linux using the touch command. This is useful in situations where you need a placeholder or a file that doesn't contain any data yet. Here's how you can create an empty file with touch:
+
+
+touch filename
+
+For example, to create an empty file named "sample," you can use:
+
+
+touch sample
+
+When you list the file's details using the ls -l command, you'll see that the file has been created with a size of 0 bytes.
+
+
+-rw-rw-r-- 1 sysadmin sysadmin 0 Nov  9 16:48 sample
+
+The touch command doesn't place any data within the newly created file. You can later edit or populate this file as needed.
+
