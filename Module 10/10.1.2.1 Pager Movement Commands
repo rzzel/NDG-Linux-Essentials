@@ -1,0 +1,15 @@
+When using the less command as a pager to view files, you have various movement commands that allow you to navigate through the content. These commands can be quite useful for efficiently scrolling through large files. Here are some of the commonly used movement commands:
+
+Spacebar: Move forward by one window (or N lines).
+B: Move backward by one window (or N lines).
+Enter: Move forward by one line (or N lines).
+Q: Exit less.
+H: Display help for less.
+As mentioned, you can use these commands to navigate through the content of the file. The Spacebar is particularly useful for moving forward one window, effectively allowing you to scroll through the document.
+
+Here's a summary of how to use these commands in the context of the less pager:
+
+To move forward, you can press the Spacebar (forward by one window) or Enter (forward by one line).
+To move backward, use the B key (backward by one window).
+To exit less, press Q.
+If you need help or want to see a list of available commands, use the H key (or Shift+H).
