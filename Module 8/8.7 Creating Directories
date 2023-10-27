@@ -1,0 +1,8 @@
+To create a directory, use the mkdir command:
+
+sysadmin@localhost:~$ ls                                               
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  sample.txt
+sysadmin@localhost:~$ mkdir test                                       
+sysadmin@localhost:~$ ls                                               
+Desktop    Downloads  Pictures  Templates   test                       
+Documents  Music      Public    sample.txt
