@@ -1,0 +1,19 @@
+STDERR can be redirected similarly to STDOUT. When using the arrow character to redirect, stream #1 (STDOUT) is assumed unless another stream is specified. Thus, stream #2 must be specified when redirecting STDERR by placing the number 2 preceding the arrow > character.
+
+To demonstrate redirecting STDERR, first observe the following command which produces an error because the specified directory does not exist:
+
+sysadmin@localhost:~$ ls /fake
+ls: cannot access /fake: No such file or directory
+Note that there is nothing in the example above that implies that the output is STDERR. The output is clearly an error message, but how could you tell that it is being sent to STDERR? One easy way to determine this is to redirect STDOUT:
+
+sysadmin@localhost:~$ ls /fake > output.txt
+ls: cannot access /fake: No such file or directory
+In the example above, STDOUT was redirected to the output.txt file. So, the output that is displayed can't be STDOUT because it would have been placed in the output.txt file instead of the terminal. Because all command output goes either to STDOUT or STDERR, the output displayed above must be STDERR.
+
+The STDERR output of a command can be sent to a file:
+
+sysadmin@localhost:~$ ls /fake 2> error.txt
+In the example, the 2> indicates that all error messages should be sent to the file error.txt, which can be confirmed using the cat command:
+
+sysadmin@localhost:~$ cat error.txt
+ls: cannot access /fake: No such file or directory
