@@ -1,0 +1,16 @@
+The cp command is used to copy files in Linux. It requires specifying a source file or directory and a destination where the copy will be placed. The basic syntax is:
+
+
+cp source destination
+source refers to the file or directory you want to copy.
+destination is the location where the copy will be created.
+For example, to copy the /etc/hosts file to your home directory (~ represents the home directory), you can use the following command:
+
+
+cp /etc/hosts ~
+After executing the cp command, you won't see any output if the copy operation is successful. You can then verify that the file was copied by listing the contents of your home directory using the ls command, as shown in your example:
+
+
+ls
+
+This will list the files and directories in your home directory, including the copied file.
