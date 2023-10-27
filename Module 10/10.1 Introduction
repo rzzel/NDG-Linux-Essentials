@@ -1,0 +1,5 @@
+A large number of the files in a typical file system are text files. Text files only contain text, no formatting features that you might see in a word processing file.
+
+Because there are so many of these files on a typical Linux system, a significant number of commands exist to help users manipulate text files. There are commands to both view and modify these files in various ways.
+
+Additionally, there are features available for the shell to control the output of commands, so instead of having the output placed in the terminal window, the output can be redirected into another file or another command. These redirection features provide users with a much more flexible and powerful environment to work within.
