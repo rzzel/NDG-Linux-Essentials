@@ -1,0 +1,16 @@
+"The asterisk * character is used to represent zero or more of any character in a filename. For example, to display all of the files in the /etc directory that begin with the letter t:
+
+sysadmin@localhost:~$ echo /etc/t*
+/etc/terminfo /etc/timezone /etc/tmpfiles.d
+The pattern t* matches any file in the /etc directory that begins with the character t followed by zero or more of any character. In other words, any files that begin with the letter t.
+
+You can use the asterisk character at any place within the filename pattern. For example, the following matches any filename in the /etc directory that ends with .d:
+
+
+sysadmin@localhost:~$ echo /etc/*.d
+/etc/apparmor.d /etc/binfmt.d /etc/cron.d /etc/depmod.d /etc/init.d /etc/insserv.conf.d /etc/ld.so.conf.d /etc/logrotate.d /etc/modprobe.d /etc/modules-load.d /etc/pam.d /etc/profile.d /etc/rc0.d /etc/rc1.d /etc/rc2.d /etc/rc3.d /etc/rc4.d /etc/rc5.d /etc/rc6.d /etc/rcS.d /etc/rsyslog.d /etc/sudoers.d /etc/sysctl.d /etc/tmpfiles.d /etc/update-motd.d
+In the next example, all of the files in the /etc directory that begin with the letter r and end with .conf are displayed:
+
+
+sysadmin@localhost:~$ echo /etc/r*.conf
+/etc/resolv.conf /etc/rsyslog.conf
