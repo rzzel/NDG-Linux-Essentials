@@ -1,0 +1,9 @@
+1. Case Sensitivity: Linux is case-sensitive, meaning it distinguishes between lowercase and uppercase characters. "hello.txt," "HELLO.txt," and "Hello.txt" are considered as different files.
+
+2. File Manipulation: Understanding how to manipulate files and directories via the command line is essential for effective Linux usage.
+
+3. Graphical vs. Command Line: While many Linux distributions offer GUI-based file management tools, it's advantageous to know how to perform these operations through the command line.
+
+4. UTF-8 Standard: Linux uses the UTF-8 character encoding standard, which is an extension of the ASCII (American Standard Code for Information Interchange) character standard.
+
+5. Man Pages: The `man` command is used to access manual pages. To learn more about ASCII, you can execute `man -s 7 ascii` for detailed information.
