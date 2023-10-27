@@ -1,0 +1,5 @@
+The exclamation point ! character is used in conjunction with the square brackets to negate a range. For example, the pattern /etc/[!DP]* matches any file that does not begin with a D or P.
+
+sysadmin@localhost:~$ echo /etc/[!a-t]*
+/etc/X11 /etc/ucf.conf /etc/udev /etc/ufw /etc/update-motd.d /etc/updatedb.conf 
+/etc/vim /etc/vtrgb /etc/wgetrc /etc/xdg
