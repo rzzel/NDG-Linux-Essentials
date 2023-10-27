@@ -1,0 +1,33 @@
+The less and more commands are used as pagers in Linux to view the contents of files one page at a time. These pager commands are especially useful for viewing large files without having all their contents dumped onto the screen at once. Here's an overview of how to use them:
+
+Using the more Command:
+
+The more command displays one page of text at a time and pauses at the end of each page. To navigate through the content, use the following commands:
+
+Enter: View the next line of text.
+Spacebar: View the next page.
+b: View the previous page.
+q: Quit the more command.
+Example of using more:
+
+more large_file.txt
+
+This will display the contents of large_file.txt one page at a time, allowing you to navigate through the file using the commands mentioned above.
+
+Using the less Command:
+
+The less command provides more advanced paging capabilities than more. It allows backward and forward navigation, searching, and more. To use less, follow these commands:
+
+Spacebar: View the next page.
+b: View the previous page.
+Arrow keys (Up and Down): Scroll up and down.
+**/: Search for a specific term (type /` followed by the search term and press Enter).
+n: Go to the next occurrence of the search term.
+N: Go to the previous occurrence of the search term.
+q: Quit the less command.
+Example of using less:
+
+less large_file.txt
+
+This will display the contents of large_file.txt and allow you to navigate, search, and quit using the commands mentioned above.
+
