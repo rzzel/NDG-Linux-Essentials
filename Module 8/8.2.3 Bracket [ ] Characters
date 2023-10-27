@@ -1,0 +1,9 @@
+Matching Single Character: Brackets [] are used to match a single character based on a list of possible characters. For example, /etc/[gu]* matches any file that begins with either a 'g' or 'u' character and contains zero or more additional characters.
+
+Range of Characters: Brackets can also represent a range of characters. For instance, /etc/[a-d]* matches all files that begin with any letter between 'a' and 'd', including 'a', 'b', 'c', and 'd'.
+
+Using Numbers: You can use brackets to match files containing numbers. For example, /etc/*[0-9]* displays files that contain at least one number.
+
+ASCII Text Table: The range in brackets is based on the ASCII text table, which defines characters in a specific order. If an invalid order is provided, no matches will be made.
+
+It's important to note that the ASCII text table can be viewed using the ascii command in Linux.
