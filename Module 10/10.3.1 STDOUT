@@ -1,0 +1,18 @@
+
+I/O redirection using the > and >> operators is a handy way to manage command output in files. As you demonstrated:
+
+The > operator redirects STDOUT to a file and overwrites the file's contents if it already exists.
+The >> operator appends STDOUT to an existing file without overwriting it.
+These techniques are particularly useful when working with commands that produce a lot of output, log files, or scripts where you want to capture or preserve command output.
+
+To summarize:
+
+Redirecting STDOUT to a file (overwriting the file if it exists):
+
+command > output.txt
+
+Appending STDOUT to a file (preserving the existing file content):
+
+command >> output.txt
+
+These tools are valuable for creating and managing log files, automated scripting, and recording command output for future reference.
