@@ -1,0 +1,15 @@
+The -v option, which stands for "verbose," is used with the cp command to make it produce output when it successfully copies a file. This can be helpful if you want to see which files are being copied and where they are being copied to. When used with cp, the -v option provides more detailed information about the copying process.
+
+For example:
+
+cp -v /etc/hosts ~
+In this command, -v causes cp to display information about the copying operation, showing the source file (in this case, /etc/hosts) and the destination (in this case, your home directory represented by ~). It helps you track the progress of the copying process.
+
+You can also specify a different name for the copied file by including the new name as part of the destination, like this:
+
+
+cp /etc/hosts ~/hosts.copy
+
+In this case, the copied file will be named "hosts.copy."
+
+After using the -v option, you can see the output of the copying process, which can be useful for confirmation.
