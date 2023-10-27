@@ -1,0 +1,17 @@
+"The question mark ? character represents any single character. Each question mark character matches exactly one character, no more and no less.
+
+Suppose you want to display all of the files in the /etc directory that begin with the letter t and have exactly 7 characters after the t character:
+
+
+sysadmin@localhost:~$ echo /etc/t???????
+/etc/terminfo /etc/timezone
+Glob characters can be used together to find even more complex patterns. The pattern /etc/*???????????????????? command only matches files in the /etc directory with twenty or more characters in the filename:
+
+
+sysadmin@localhost:~$ echo /etc/*????????????????????
+/etc/bindresvport.blacklist /etc/ca-certificates.conf
+The asterisk and question mark could also be used together to look for files with three-letter extensions by using the /etc/*.??? pattern:
+
+
+sysadmin@localhost:~$ echo /etc/*.???
+/etc/issue.net /etc/locale.gen
