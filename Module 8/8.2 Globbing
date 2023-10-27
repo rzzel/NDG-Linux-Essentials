@@ -1,0 +1,7 @@
+Glob characters are often referred to as wild cards. These are symbol characters that have special meaning to the shell.
+
+Globs are powerful because they allow you to specify patterns that match filenames in a directory. So instead of manipulating a single file at a time, you can easily execute commands that affect many files. For instance, by using glob characters, it is possible to manipulate all files with a specific extension or with a particular filename length.
+
+Unlike commands that the shell runs, or options and arguments that the shell passes to commands, glob characters are interpreted by the shell itself before it attempts to run any command. As a result, glob characters can be used with any command.
+
+The examples provided in this chapter use the echo command for demonstration.
