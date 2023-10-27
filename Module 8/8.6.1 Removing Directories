@@ -1,0 +1,23 @@
+You can delete directories in Linux using the rm command with the -r (recursive) option, as you mentioned. However, it's crucial to use this command with caution because it will delete not only the directory but also all the files and subdirectories inside it. Here's how to delete a directory with rm -r:
+
+rm -r directory_name
+
+For example, if you want to delete a directory named "Videos" and its contents:
+
+rm -r Videos
+
+As a safety measure, it's a good practice to use the -i option with the rm command when deleting directories and their contents to confirm each deletion interactively:
+
+rm -ri directory_name
+
+To delete an empty directory, you can also use the rmdir command. However, it can only remove directories that don't contain any files or subdirectories. Here's how to use the rmdir command:
+
+rmdir directory_name
+
+For example, to remove an empty directory named "Documents":
+
+rmdir Documents
+
+
+If the directory is not empty, you will receive a "Directory not empty" error, as you demonstrated in your example.
+Keep in mind that when using rm -r, it's irreversible, and deleted files and directories cannot be easily recovered. Always double-check and ensure you're deleting the correct items.
