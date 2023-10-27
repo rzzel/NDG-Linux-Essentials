@@ -1,0 +1,26 @@
+The tar command is a versatile tool for working with archives. You can use it to extract files from an archive, which is often useful for moving or copying multiple files. Here's a summary of how to extract files from an archive using tar:
+
+Extract Files from an Archive:
+
+-x: This option tells tar to extract files from an archive.
+-j (optional): This option is used when the archive is compressed with bzip2.
+-f ARCHIVE: Use the -f option followed by the name of the archive file you want to extract from.
+To extract files from an archive, you can use a command like the following:
+
+tar -xjf folders.tbz
+
+In this example, folders.tbz is the name of the archive you want to extract files from. If the archive is compressed with bzip2, you include the -j option. The output shows the extraction process, and the original directory structure and files are recreated in the current working directory.
+
+To make the extraction process more verbose and get detailed information about the files being processed, you can add the -v (verbose) option:
+
+tar -xjvf folders.tbz
+
+The -v option provides a verbose listing of the files being extracted.
+
+Remember to keep the -f flag at the end of the tar command, as tar assumes that whatever follows this option is the name of the archive file.
+
+You can also specify specific files or directories to extract from the archive by providing their names as arguments to the tar command. For example, to extract only the School/Art/linux.txt file from the archive, you can use a command like this:
+
+tar -xjvf folders.tbz School/Art/linux.txt
+
+The tar command offers additional features, such as using patterns to extract files, excluding specific files, or displaying the extracted files on the screen instead of writing them to disk. The tar documentation provides detailed information on these advanced features.
