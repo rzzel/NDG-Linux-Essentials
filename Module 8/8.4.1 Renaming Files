@@ -1,0 +1,22 @@
+The mv command is not just used to move a file, but also to rename a file. If the destination for the mv command is a directory, the file is moved to the directory specified. The name of the file only changes if a destination file name is also specified.
+
+sysadmin@localhost:~$ ls                                               
+Desktop    Downloads  Pictures  Templates  example.txt                          
+Documents  Music      Public    Videos     hosts.copy                 
+sysadmin@localhost:~$ mv example.txt Videos/newexample.txt             
+sysadmin@localhost:~$ ls
+Desktop    Downloads  Pictures  Templates  hosts.copy                           
+Documents  Music      Public    Videos                               
+sysadmin@localhost:~$ ls Videos                                       
+hosts  newexample.txt       
+
+If a destination directory is not specified, the file is renamed using the destination file name and remains in the source directory. For example, the following commands renames the newexample.txt file to myfile.txt:
+
+sysadmin@localhost:~$ cd Videos                                        
+sysadmin@localhost:~/Videos$ ls                                        
+hosts  newexample.txt                                                  
+sysadmin@localhost:~/Videos$ mv newexample.txt myfile.txt           
+sysadmin@localhost:~/Videos$ ls
+hosts  myfile.txt
+
+Think of the previous mv example to mean move the newexample.txt file from the current directory to the current directory and give the new file the name myfile.txt.
