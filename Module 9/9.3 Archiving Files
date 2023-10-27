@@ -1,0 +1,21 @@
+Archiving files is an efficient way to bundle multiple files together, making them easier to transmit or store as a single unit. In the Linux world, the traditional archiving utility is called tar, short for Tape ARchive. tar is a versatile tool that allows you to create, extract, and list the contents of archive files.
+
+Modes of tar Command:
+
+Create Mode: Use the tar command in create mode to make a new archive from a series of files. The basic syntax is:
+
+tar -cvf archive_name.tar file1 file2 file3
+
+This command will create a new archive named archive_name.tar from the specified files (file1, file2, file3).
+
+Extract Mode: The extract mode is used to pull one or more files out of an archive. To extract files from an archive, you can use the tar command with the x option. The basic syntax is:
+
+tar -xvf archive_name.tar
+
+This command will extract all the files from the archive_name.tar.
+
+List Mode: The list mode allows you to view the contents of an archive without extracting them. To list the contents of an archive, use the tar command with the t option. The basic syntax is:
+
+tar -tvf archive_name.tar
+
+This command will display a list of files and directories contained in archive_name.tar without actually extracting them.
