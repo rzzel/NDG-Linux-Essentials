@@ -1,0 +1,18 @@
+When you use a glob pattern in a command, such as ls /etc/a*, the shell expands the pattern into corresponding file and directory names.
+
+If you run the ls /etc/a* command, the shell effectively runs multiple ls commands, one for each matching item. It's as if you ran ls /etc/adduser.conf, ls /etc/alternatives, ls /etc/apparmor, and so on.
+
+When the ls command sees multiple arguments, it performs a list operation on each item separately, listing the files or directories.
+
+Running ls on a single file results in the name of the file being printed. You can use the -l option with ls to see details about a specific file.
+
+However, when the ls command is given a directory name as an argument, it displays the contents of the directory, not just the directory name. This means it lists the filenames within the directory.
+
+This can lead to confusion when using glob patterns, as it may seem like ls is listing files incorrectly when, in reality, it's showing the contents of directories that match the pattern.
+
+To avoid this confusion and ensure that ls displays only the directory name when using glob patterns, you can use the -d option with ls. This option instructs ls to show the directory name itself and not its contents.
+
+For example:
+
+ls -d /etc/x*
+This command will display the directory name /etc/xdg instead of listing its contents.
