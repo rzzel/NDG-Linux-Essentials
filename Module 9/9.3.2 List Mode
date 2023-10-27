@@ -1,0 +1,22 @@
+The tar command can also be used to list the contents of an archive without extracting the files. The -t option is used for this purpose. Additionally, you can specify an archive file with the -f option, and if the archive is compressed, you can use the appropriate decompression command (e.g., bunzip2) in a pipeline to decompress the archive before listing its contents.
+
+Here's a summary of how to list the contents of an archive using tar:
+
+List Contents of an Archive:
+
+-t: This option tells tar to list the files in an archive.
+-j (optional): This option is used when the archive is compressed with bzip2.
+-f ARCHIVE: Use the -f option followed by the name of the archive file you want to list the contents of.
+To list the contents of an archive, you can use a command like the following:
+
+tar -tjf folders.tbz
+
+In this example, folders.tbz is the name of the archive you want to list the contents of. If the archive is compressed with bzip2, you include the -j option. The output will show the directory structure and the files contained within the archive.
+
+To demonstrate that the file is not special and can be decompressed and listed in two steps using a pipeline, you can use a command like this:
+
+bunzip2 -c folders.tbz | tar -t
+
+The bunzip2 -c part of the command decompresses the file, and the output is then piped to the tar -t command, which lists the contents of the archive.
+
+These examples are designed to showcase the use of the tar command for listing and decompressing archives. Keep in mind that the specific files shown in the examples might not be available in the virtual machine environment of this course. 
