@@ -1,0 +1,30 @@
+Extended Regular Expressions with grep
+
+Extended regular expressions provide more expressive power when searching for patterns in text. Historically, the egrep command was used to work with extended regular expressions. However, modern versions of grep support extended regular expressions through the -E option.
+
+Here are some extended regular expression features:
+
+?: Matches the previous character zero or one time, making it an optional character.
++: Matches the previous character one or more times.
+|: Acts like a logical "or" operator, allowing you to match multiple patterns.
+To use extended regular expressions with grep, you include the -E option and specify your pattern within single quotes. Here are some examples:
+
+To match "colou" with zero or one "u" followed by an "r":
+
+grep -E 'colou?r' spelling.txt
+
+This matches "color" and "colour" because the "u" is optional.
+
+To match one or more "e" characters:
+
+grep -E 'e+' red.txt
+
+This matches lines containing "red," "reef," "reeed," and so on, because they all have one or more "e" characters.
+
+To match either "gray" or "grey":
+
+grep -E 'gray|grey' spelling.txt
+
+This matches lines with either "gray" or "grey."
+
+Using extended regular expressions with grep is a powerful way to create more flexible and complex patterns for text searching.
