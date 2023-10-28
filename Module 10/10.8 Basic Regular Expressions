@@ -1,0 +1,36 @@
+Regular Expressions (Regex)
+
+Regular expressions, often referred to as regex, are patterns made up of normal and special characters used for finding specific text patterns in files. They are commonly used by various Linux commands, including grep, sed, and awk, to perform powerful text search and manipulation operations.
+
+Types of Characters:
+
+Normal Characters: Alphanumeric characters that match themselves. For example, 'a' matches 'a'.
+Special Characters: Characters with special meanings in regex. They do not match themselves and are used to define complex search patterns.
+Basic Regular Expressions (BRE):
+
+Basic Regular Expressions are supported by a wide range of Linux commands and include the following special characters:
+
+.: Matches any single character.
+[ ]: A list or range of characters to match a single character. If the first character is ^, it means any character not in the list.
+*: Matches the previous character repeated zero or more times.
+^: If the first character in the pattern, it matches the pattern at the beginning of a line. Otherwise, it's treated as a literal caret (^).
+$: If the last character in the pattern, it matches the pattern at the end of a line. Otherwise, it's treated as a literal dollar sign ($).
+Examples:
+
+a.b matches 'axb', 'a9b', but not 'axbx'.
+[aeiou] matches any vowel.
+[^0-9] matches any non-digit character.
+a* matches 'a', 'aa', 'aaa', and so on.
+^root matches lines that start with 'root'.
+bin$ matches lines that end with 'bin'.
+Using Single Quotes:
+
+It's good practice to use single quotes around regular expressions to prevent the shell from interpreting special characters.
+
+Commands that Support Regex:
+
+grep: Searches for patterns in files.
+sed: Edits text using regex patterns.
+awk: Manipulates data with regex.
+Regex is a powerful tool for text processing in Linux, enabling complex pattern matching and manipulation.
+
