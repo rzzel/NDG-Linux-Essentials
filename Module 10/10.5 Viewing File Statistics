@@ -1,0 +1,38 @@
+wc Command - Word Count
+
+- wc stands for "word count" and is used to count lines, words, and bytes in text files.
+
+Basic Usage:
+- wc [options] [file(s)]
+
+Options:
+- -l: Display only the number of lines.
+- -w: Display only the number of words.
+- -c: Display only the number of bytes (characters).
+
+Output Columns:
+1. Number of lines
+2. Number of words
+3. Number of bytes (characters)
+4. File name (when provided)
+
+Total Count:
+- When you provide multiple files as arguments, wc displays totals for lines, words, and bytes across all the specified files.
+
+Example:
+wc file.txt
+- Displays line count, word count, byte count, and the filename for file.txt.
+
+Example with Multiple Files:
+wc file1.txt file2.txt
+- Displays statistics for file1.txt, file2.txt, and a total for both files.
+
+Piping with wc:
+- wc can be used with pipes to count lines. For example, you can count the number of files in a directory with ls | wc -l.
+
+Use Cases:
+- Useful for quickly counting lines, words, and bytes in text files.
+- Helpful for calculating cumulative statistics across multiple files.
+
+Remember:
+- wc is a versatile command that can provide various statistics about text files. You can choose which statistics to display by using the appropriate options.
