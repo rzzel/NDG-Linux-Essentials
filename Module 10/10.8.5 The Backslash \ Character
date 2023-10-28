@@ -1,0 +1,28 @@
+In some cases, you may want to match a character that happens to be a special regular expression character. For example, consider the following:
+
+ 
+sysadmin@localhost:~/Documents$ cat newhome.txt
+Thanks for purchasing your new home!!
+
+**Warning** it may be haunted.
+
+There are three bathrooms.
+
+**Beware** of the ghost in the bedroom.
+
+The kitchen is open for entertaining.
+
+**Caution** the spirits don't like guests.
+
+Good luck!!!
+sysadmin@localhost:~/Documents$ grep 're*' newhome.txt
+Thanks for purchasing your new home!!
+**Warning** it may be haunted.
+There are three bathrooms.
+**Beware** of the ghost in the bedroom.
+The kitchen is open for entertaining.
+**Caution** the spirits don't like guests.
+In the output of the grep command above, the search for re* matched every line which contained an r followed by zero or more of the letter e. To look for an actual asterisk * character, place a backslash \ character before the asterisk * character:
+
+sysadmin@localhost:~/Documents$ grep 're\*' newhome.txt
+**Beware** of the ghost in the bedroom.
