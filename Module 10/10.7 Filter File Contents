@@ -1,0 +1,55 @@
+Grep Command
+
+The grep command is a powerful tool for searching text patterns in files or the output of other commands. It can match simple text strings or complex patterns using regular expressions.
+
+Basic Syntax:
+
+grep [OPTIONS] PATTERN [FILE...]
+
+Options:
+
+--color: Highlights matched items in red for easier visualization.
+-c: Counts the number of lines that match the pattern.
+-n: Displays original line numbers of matching lines.
+-v: Inverts the match, showing lines that don't contain the pattern.
+-i: Ignores case (capitalization) distinctions when matching.
+-w: Matches only whole words (requires non-word characters before and after the pattern).
+Examples:
+
+Searching for a pattern in a file:
+
+grep bash /etc/passwd
+
+Counting lines that match a pattern:
+
+grep -c bash /etc/passwd
+
+Displaying line numbers of matching lines:
+
+grep -n bash /etc/passwd
+
+Inverting the match, showing lines that don't contain the pattern:
+
+grep -v nologin /etc/passwd
+
+Ignoring case distinctions when matching:
+
+grep -i the newhome.txt
+
+Matching whole words:
+
+grep -w are newhome.txt
+
+Use Cases:
+
+Searching for specific text patterns in files.
+Counting occurrences of a pattern.
+Displaying line numbers of matching lines.
+Filtering out lines that don't contain a pattern.
+Ignoring case when matching patterns.
+Matching whole words to avoid partial matches.
+Remember:
+
+grep is a versatile tool for pattern matching.
+Options like -c, -n, -v, -i, and -w enhance its functionality.
+grep is often used to search log files or filter command outputs for specific information.
