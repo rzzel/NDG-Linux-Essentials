@@ -1,0 +1,13 @@
+Anchor Characters: ^ and $
+
+Anchor characters in regular expressions, specifically ^ and $, allow you to specify where a pattern match should occur within a line. These anchors help narrow down search results by indicating whether the match must be at the beginning or end of the line.
+
+^ (Caret): The caret character is used to ensure that a pattern appears at the beginning of a line. For example, to find all lines in a file that start with the word "root," you would use the pattern ^root. This guarantees that "root" is at the very beginning of a line.
+
+grep '^root' /etc/passwd
+
+$ (Dollar Sign): The dollar sign character is used to ensure that a pattern appears at the end of a line. For instance, to find lines that end with the letter "r," you can use the pattern r$. This requires that "r" is the last character in a line.
+
+grep 'r$' alpha-first.txt
+
+Remember that the position of these anchor characters within your regular expression is crucial. ^ must be the first character in the pattern to indicate the beginning of a line, and $ must be the last character to signify the end of a line. Using these anchors can help you create more specific and targeted searches.
