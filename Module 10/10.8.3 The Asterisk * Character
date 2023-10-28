@@ -1,0 +1,62 @@
+The asterisk * character is used to match zero or more occurrences of a character or pattern preceding it. For example, e* would match zero or more occurrences of the letter e:
+
+sysadmin@localhost:~/Documents$ cat red.txt
+red
+reef
+rot
+reeed
+rd
+rod
+roof
+reed
+root
+reel
+read
+sysadmin@localhost:~/Documents$ grep 're*d' red.txt
+red
+reeed
+rd
+reed
+It is also possible to match zero or more occurrences of a list of characters by utilizing the square brackets. The pattern [oe]* used in the following example matches zero or more occurrences of the o character or the e character:
+
+sysadmin@localhost:~/Documents$ grep 'r[oe]*d' red.txt
+red
+reeed
+rd
+rod
+reed
+When used with only one other character, * isn't very helpful. Any of the following patterns would match every string or line in the file: '.*' 'e*' 'b*' 'z*' because the asterisk * character can match zero occurrences of a pattern.
+
+sysadmin@localhost:~/Documents$ grep 'z*' red.txt
+red
+reef
+rot
+reeed
+rd
+rod
+roof
+reed
+root
+reel
+read
+sysadmin@localhost:~/Documents$ grep 'e*' red.txt
+red
+reef
+rot
+reeed
+rd
+rod
+roof
+reed
+root
+reel
+read
+To make the asterisk character useful, it is necessary to create a pattern which includes more than just the one character preceding it. For example, the results above can be refined by adding another e to make the pattern ee* effectively matching every line which contains at least one e.
+
+sysadmin@localhost:~/Documents$ grep 'ee*' red.txt
+red
+reef
+reeed
+reed
+reel
+read
