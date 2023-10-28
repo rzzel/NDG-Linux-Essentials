@@ -1,0 +1,24 @@
+In regular expressions, square brackets [ ] are used to define a character class, which represents a single character that can be any of the characters specified within the brackets. Character classes are a way to match one character from a set of characters. Let's delve into how they work:
+
+[abc]: This pattern matches any single character that is either 'a', 'b', or 'c'. It's a simple character class containing three choices.
+
+[^abc]: Adding a caret ^ at the beginning of a character class inverts it. This pattern matches any single character that is NOT 'a', 'b', or 'c'.
+
+[0-9]: You can specify a range of characters using a hyphen. This pattern matches any single digit, from '0' to '9'. It's a convenient way to match numbers.
+
+[^0-9]: Inverted character class with a range. This matches any single character that is NOT a digit (0-9).
+
+[a-zA-Z]: Ranges can be used for letters as well. This pattern matches any single lowercase or uppercase letter.
+
+[A-Za-z0-9]: You can combine ranges and individual characters to create a versatile character class. This matches any single alphanumeric character.
+
+[^A-Za-z0-9]: Inverted character class for alphanumeric characters.
+
+Character classes are particularly useful when you need to match characters within a specified set or exclude characters from a set.
+
+Here's an example of how you might use character classes in grep to match lines containing specific characters:
+
+grep '[aeiou]' file.txt: Matches lines containing any vowel.
+grep '[^0-9]' file.txt: Matches lines not containing any digits.
+grep '[a-zA-Z]' file.txt: Matches lines containing at least one letter.
+These character classes provide powerful and flexible options for specifying character patterns in regular expressions.
