@@ -1,0 +1,35 @@
+The GNU nano text editor is a simple and user-friendly text editor that's well-suited for editing small text files. It's often recommended for beginners due to its straightforward interface. Here are some basic commands and operations you can perform using the nano text editor:
+
+Opening a File:
+
+To open a file using nano, simply type nano followed by the filename, e.g., nano test.sh.
+Basic Text Editing:
+
+You can edit the file content by typing directly with your keyboard.
+Use the arrow keys to navigate through the text.
+Use the backspace or delete key to delete text.
+Saving and Exiting:
+
+To save your changes, press Ctrl + O, followed by pressing Enter. This will prompt you to confirm the filename; you can press Enter again to save it with the current filename.
+To exit nano, press Ctrl + X. If you have unsaved changes, nano will prompt you to save the changes before exiting.
+Cut, Copy, and Paste:
+
+To cut text, use Ctrl + K.
+To copy text, use Ctrl + K to cut and Ctrl + U to paste.
+Search and Replace:
+
+To search within the document, use Ctrl + W, followed by typing your search term and pressing Enter.
+To search and replace, use Ctrl + W, then Ctrl + R, and follow the prompts.
+Help:
+
+If you're unsure about the available commands, you can access the help screen by pressing Ctrl + G. It will show you a list of available commands.
+Page Navigation:
+
+To scroll up one page, use Ctrl + Y.
+To scroll down one page, use Ctrl + V.
+Viewing Current Position:
+
+If you want to see the current line and column of the cursor, as well as the file's size, press Ctrl + C.
+Exiting without Saving:
+
+If you want to exit nano without saving, press N when prompted.
