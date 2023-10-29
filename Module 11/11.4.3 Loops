@@ -1,0 +1,63 @@
+In Bash scripting, loops allow you to execute a set of commands repeatedly. There are two main types of loops in shell scripts: the for loop and the while loop. Here's how they work:
+
+For Loop:
+
+The for loop is used when you have a finite collection or list of items to iterate through. It's suitable for tasks like processing a list of files, a set of server names, or any predefined list. The basic structure of a for loop is as follows:
+
+#!/bin/bash
+
+for item in list_of_items; do
+  # Commands to execute for each item
+done
+Here's a practical example using a list of server names:
+
+#!/bin/bash
+
+SERVERS="servera serverb serverc"
+for server in $SERVERS; do
+  echo "Doing something to $server"
+done
+In this script, the variable $SERVERS holds a space-separated list of server names. The for loop iterates through the list, and for each iteration, the variable server is set to the current server name.
+
+You can also directly provide a list within the for loop, as shown in this example:
+
+#!/bin/bash
+
+for name in Sean Jon Isaac David; do
+  echo "Hello $name"
+done
+Here, the for loop iterates over the list of names, greeting each person individually.
+
+Additionally, you can use file globs (wildcards) to loop through files in a directory:
+
+#!/bin/bash
+
+for file in *; do
+  echo "Doing something to $file"
+done
+In this case, the for loop iterates over all files in the current directory.
+
+While Loop:
+
+A while loop is used when you need to repeat a set of commands based on a specific condition that you want to check during each iteration. The loop keeps running as long as the condition remains true. The basic structure of a while loop is as follows:
+
+#!/bin/bash
+
+initialize_variable
+while [ condition ]; do
+  # Commands to execute
+  update_variable
+done
+Here's an example of a while loop that counts from 0 to 9:
+
+#!/bin/bash
+
+i=0
+while [ $i -lt 10 ]; do
+  echo $i
+  i=$(( $i + 1))
+done
+echo "Done counting"
+In this script, the variable i is initialized to 0. The while loop checks if i is less than 10. Inside the loop, the current value of i is echoed, and i is incremented by 1 on each iteration using arithmetic expansion $(( ... )). The loop continues until i becomes 10, and then the "Done counting" message is printed.
+
+These are the two fundamental types of loops in Bash scripting, and they can be used for various tasks that require repetitive execution of commands. The choice between a for loop and a while loop depends on whether you have a predefined list of items or you need to keep looping based on a condition.
