@@ -1,0 +1,43 @@
+In shell scripting, variables are used to store and manage data. Here's a summary of how to work with variables in a Bash script:
+
+Variable Assignment:
+
+To assign a value to a variable, use the = symbol without spaces between the variable name, the equals sign, and the value. For example:
+
+ANIMAL="penguin"
+
+Variable Interpolation:
+To access the value stored in a variable, prefix the variable name with a dollar sign $. This is known as variable interpolation. For example:
+
+echo "My favorite animal is a $ANIMAL"
+
+Variable Naming:
+Variable names are case-sensitive. It's a good practice to use uppercase letters for environment variables and lowercase letters for user-defined variables.
+Assigning Variables to Other Variables:
+
+You can assign a variable to another variable. For example:
+
+ANIMAL=penguin
+SOMETHING=$ANIMAL
+
+Command Substitution:
+You can assign the output of a command to a variable using command substitution. Use backticks or the $(command) syntax. For example:
+
+CURRENT_DIRECTORY=`pwd`
+
+Reading User Input:
+To get user input and assign it to a variable, use the read command. For example:
+
+echo -n "What is your name? "
+read NAME
+
+Special Variables:
+In addition to user-defined variables, there are special variables like $0 (script name) and $1, $2, etc. (script arguments). The exit status of the last command is stored in $?.
+Setting the Exit Code:
+
+You can set the exit code of your script using the exit command. By convention, a code of 0 indicates success, and non-zero codes (1 and higher) indicate errors.
+
+# Something bad happened!
+exit 1
+
+Variables are a fundamental concept in shell scripting, and understanding how to use them effectively is key to creating powerful and flexible scripts.
