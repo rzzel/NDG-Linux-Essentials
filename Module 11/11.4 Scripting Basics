@@ -1,0 +1,7 @@
+You got your first taste of scripting earlier in this chapter where we introduced a very basic script that ran a single command. The script started with the shebang (or hashbang) line, telling Linux that /bin/bash (which is Bash) is to be used to execute the script.
+
+Other than running commands, there are 3 topics you must become familiar with:
+
+Variables, which hold temporary information in the script
+Conditionals, which let you do different things based on tests you write
+Loops, which let you do the same thing over and over
