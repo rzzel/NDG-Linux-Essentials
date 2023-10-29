@@ -1,0 +1,68 @@
+In Bash scripting, the if statement is used for conditional branching. It allows you to execute different parts of your script based on certain conditions. Here's a summary of how to use if statements in Bash:
+
+Basic if Statement:
+
+if somecommand; then
+  # Code to execute if the condition is true (exit code is 0)
+fi
+The if statement checks the exit code of the command. If the exit code is 0 (success), the code within the if block is executed.
+Using if with else:
+
+if somecommand; then
+  # Code to execute if the condition is true (exit code is 0)
+else
+  # Code to execute if the condition is false (exit code is not 0)
+fi
+The else part is executed when the condition in the if statement is false (exit code is not 0).
+Using the test Command (or [) for Comparisons:
+
+You can use the test command (or its alias [) to perform various comparisons, such as checking if a file exists, comparing numbers, or comparing strings.
+Example:
+
+if [ -f /tmp/foo ]; then
+  # Code to execute if the file /tmp/foo exists
+fi
+Comparisons with test and [:
+
+-f checks if a file exists.
+! -f checks if a file doesn't exist.
+-d checks if a directory exists.
+-x checks if a file is executable.
+-eq checks if two numbers are equal.
+-ne checks if two numbers are not equal.
+= checks if two strings are equal.
+!= checks if two strings are not equal.
+-o is used for logical OR.
+-a is used for logical AND.
+Multiple Conditions with elif:
+
+You can use elif (short for "else if") to test multiple conditions.
+Example:
+
+if [ "$1" = "hello" ]; then
+  # Code to execute if $1 is "hello"
+elif [ "$1" = "goodbye" ]; then
+  # Code to execute if $1 is "goodbye"
+else
+  # Code to execute if none of the conditions match
+fi
+Using the case Statement for Multiple Tests:
+
+The case statement allows you to test multiple values or patterns more compactly.
+
+Example:
+
+case "$1" in
+  hello|hi)
+    # Code to execute for "hello" or "hi"
+    ;;
+  goodbye)
+    # Code to execute for "goodbye"
+    ;;
+  *)
+    # Code to execute for all other cases
+    ;;
+esac
+The case statement matches the value of $1 against different patterns and executes the corresponding code block.
+
+By using if statements and comparisons, you can create scripts that make decisions and perform different actions based on specific conditions. The case statement is particularly useful when you have multiple conditions to check.
