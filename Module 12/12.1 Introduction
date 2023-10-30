@@ -1,0 +1,6 @@
+Computers begin as a hardware device but can grow to encompass virtual machines that are entirely constructed out of software and appear to all purposes to be a remote machine that users can access via remote protocols and methods.
+
+Keeping virtual machines in mind, it’s imperative to understand what makes up the physical hardware that makes up a computer. Without an understanding of what components make up a computer, how they are integrated and communicate between each other, and how a computer should function, you cannot properly install, configure, administer, secure or troubleshoot a system.
+
+There are hundreds of specific types of computers in service, from set-top boxes to dedicated firewalls to laptops, servers and many special-purpose devices, but they all feature at least a few of the same basic components that actually make them a computer. This chapter introduces and explains the basics of what makes up a computer and expands to a few optional items that are fairly commonplace.
+
