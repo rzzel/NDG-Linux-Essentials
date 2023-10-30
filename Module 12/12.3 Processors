@@ -1,0 +1,37 @@
+The Central Processing Unit (CPU) is a crucial hardware component of a computer responsible for executing instructions and performing calculations. In the context of Linux, CPUs play a vital role in system performance and compatibility. There are primarily two types of processors used in desktop and server computers running Linux: x86 and x86_64.
+
+x86 Processor Family:
+
+These processors process data in 32-bit chunks.
+The x86 family originated with Intel's 8086 processor in 1978. Subsequent generations include the 80386 (i386), 80486 (i486), the Pentium series (i586), and the Pentium Pro series (i686).
+Many other companies, such as AMD and Cyrix, have also produced x86-compatible processors.
+Linux is capable of supporting processors as old as the i386, but many modern distributions limit their support to at least the i686 or later processors.
+x86_64 Processor Family:
+
+These processors process data in 64-bit chunks.
+The x86_64 family includes 64-bit processors from both Intel and AMD.
+These processors have been in production since around 2000, and most modern processors are of this type.
+They are backward compatible, meaning they can process data in 32-bit mode as well.
+To determine which family your CPU belongs to, you can use the arch command, which will report either "x86" for 32-bit or "x86_64" for 64-bit:
+
+
+sysadmin@localhost:~$ arch
+x86_64
+
+For more detailed information about your CPU, you can use the lscpu command:
+
+sysadmin@localhost:~$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    1
+Core(s) per socket:    4
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+
+In the lscpu output, you can see information about the CPU's architecture, supported CPU operation modes (32-bit and 64-bit), the number of CPU cores, sockets, and more. The "Architecture" line confirms that the CPU is x86_64 (64-bit).
+
+Understanding your CPU's architecture is important when working with Linux, as it affects software compatibility and system performance, especially for tasks that require extensive CPU resources or 64-bit memory addressing.
