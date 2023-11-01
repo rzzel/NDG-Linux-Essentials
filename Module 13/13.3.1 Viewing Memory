@@ -1,0 +1,51 @@
+Executing the free command without any options provides a snapshot of the memory being used at that moment.
+
+sysadmin@localhost:~$ free                                                      
+             total       used       free     shared    buffers     cached       
+Mem:      32953528   26171772    6781756          0       4136   22660364    
+-/+ buffers/cache:    3507272   29446256                                        
+Swap:            0          0          0  
+If you want to monitor memory usage over time with the free command, then you can execute it with the -s option (how often to update) and specify that number of seconds. For example, executing the following free command would update the output every ten seconds:
+
+sysadmin@localhost:~$ free -s 10
+              total        used        free      shared  buff/cache   available
+Mem:      132014640    47304084    77189512        3008     7521044    84085528
+Swap:     134196220       42544   134153676
+
+              total        used        free      shared  buff/cache   available
+Mem:      132014640    47302928    77190668        3008     7521044    84086684
+Swap:     134196220       42544   134153676
+To make it easier to interpret what the free command is outputting, the -m or -g options can be useful by showing the output in either megabytes or gigabytes, respectively. Without these options, the output is displayed in bytes:
+
+When reading the output of the free command:
+
+‌⁠​​⁠​ Descriptive Header:
+
+             total       used       free     shared    buffers     cached       
+Mem:      32953528   26171772    6781756          0       4136   22660364    
+-/+ buffers/cache:    3507272   29446256                                        
+Swap:            0          0          0  
+Physical Memory Statistics:
+
+             total       used       free     shared    buffers     cached       
+Mem:      32953528   26171772    6781756          0       4136   22660364    
+-/+ buffers/cache:    3507272   29446256                                        
+Swap:            0          0          0  
+Memory Adjustment:
+
+The third line represents the amount of physical memory after adjusting those values by not taking into account any memory that is in use by the kernel for buffers and caches. Technically, this "used" memory could be "reclaimed" if needed:
+
+             total       used       free     shared    buffers     cached       
+Mem:      32953528   26171772    6781756          0       4136   22660364    
+-/+ buffers/cache:    3507272   29446256                                        
+Swap:            0          0          0  
+Swap Memory:
+
+The fourth line of output refers to swap memory, also known as virtual memory. This is space on the hard disk that is used like physical memory when the amount of physical memory becomes low. Effectively, this makes it seem that the system has more memory than it does, but using swap space can also slow down the system:
+
+             total       used       free     shared    buffers     cached       
+Mem:      32953528   26171772    6781756          0       4136   22660364    
+-/+ buffers/cache:    3507272   29446256                                        
+Swap:            0          0          0  
+If the amount of memory and swap that is available becomes very low, then the system will begin to automatically terminate processes, making it critical to monitor the system's memory usage. An administrator that notices the system becoming low on free memory can use top or kill to terminate the processes of their own choice, rather than letting the system choose.
+
