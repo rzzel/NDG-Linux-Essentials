@@ -1,0 +1,13 @@
+The process management in Linux is hierarchical, and each process (except for the first process with PID 1, known as the init process) has a parent process from which it was created. This relationship creates a tree-like structure known as a process tree. In this tree, the init process serves as the root, and all other processes are either children or descendants of this root process.
+
+Here's a breakdown of the process management concepts:
+
+Init Process: The init process is the first process started by the kernel during system boot. Its PID is always 1, and it's responsible for starting other system processes. On traditional System V-based systems, the init process is often represented by /sbin/init, while on systemd-based systems, it may be /bin/systemd. This process can start child processes, which, in turn, may start their own children.
+
+Parent and Child Processes: In the process tree, each process (except for the init process) has a parent process and can create child processes. The process that initiates the creation of another process is the parent, and the new process is the child. The parent-child relationship is maintained in the system and can be tracked using the Parent Process ID (PPID) field.
+
+Maximum PID: The Linux kernel assigns a unique Process ID (PID) to each running process. The maximum PID value is determined by the pid_max configuration, which can be viewed and modified through the /proc/sys/kernel/pid_max file. When the PID limit is reached, the PID values wrap around and are reused.
+
+Process Tree View: The pstree command allows you to visualize the process tree, displaying the hierarchy of parent-child relationships among processes. Each process and its descendants are displayed in a tree-like format.
+
+Understanding process management and the process tree is essential for monitoring and managing Linux systems, especially in scenarios where processes need to be tracked, controlled, or terminated for various reasons. It's also a fundamental concept for system administrators and developers working with Linux.
