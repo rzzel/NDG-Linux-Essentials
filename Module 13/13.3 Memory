@@ -1,0 +1,19 @@
+Virtual Addressing: In Linux, memory management uses a system of virtual addressing. Virtual addressing enables multiple processes to access memory as if they have their own dedicated memory space, even though the physical RAM is shared among all running processes. Each process has its own virtual address space, allowing it to access a large addressable memory range.
+
+Physical Memory and Virtual Memory: The physical memory (RAM) in a system is the actual hardware memory available. On the other hand, virtual memory extends the available memory by utilizing disk space as a supplement to physical RAM. When physical RAM is insufficient to hold all the data and code in memory, the Linux kernel swaps data between RAM and the disk. This mechanism allows the system to handle more memory requests than it has physical memory for.
+
+Memory Blocks: Memory is divided into equally sized blocks or pages. In Linux, pages are typically 4 KB in size. This division allows for efficient management and allocation of memory.
+
+Address Space: Every process in Linux has its own address space, allowing it to use virtual memory addresses. The address space can be much larger than the actual physical memory, thanks to virtual addressing.
+
+User Space and Kernel Space: Linux divides the address space into two main regions: user space and kernel space.
+
+User Space: This is the memory area allocated for user programs and applications. Regular user processes run in this space. User space is isolated from the kernel space to prevent user programs from interfering with the kernel's critical operations.
+
+Kernel Space: This is the memory area reserved for the Linux kernel and its components. The kernel runs in this protected space, and it manages system resources and provides system services. Kernel space is restricted and isolated from user space to maintain system stability and security.
+
+System Calls: Processes in user space interact with the kernel using system calls. System calls are a set of functions that serve as intermediaries between user programs and the kernel. They allow user processes to request services and resources from the kernel in a controlled and secure manner. System calls help maintain the separation between user space and kernel space.
+
+Stability and Isolation: The separation of user space and kernel space is a fundamental design principle in Linux. It ensures that potentially unstable or malicious user programs do not have direct access to kernel functions or memory. This isolation contributes to the stability and security of Linux systems.
+
+Overall, Linux's memory management system, with its virtual addressing, division into user and kernel spaces, and use of system calls, is designed to provide a stable and secure environment for running multiple processes concurrently. This architecture enables efficient resource allocation and isolation, making Linux a robust and reliable operating system.
