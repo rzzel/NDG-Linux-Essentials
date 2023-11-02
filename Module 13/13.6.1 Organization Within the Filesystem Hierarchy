@@ -1,0 +1,37 @@
+User Home Directories:
+
+/home: Contains a directory for each user account (e.g., /home/bob for the user "bob").
+Users can create files in their home directory, /tmp, and /var/tmp.
+Binary Directories:
+User-Specific Binaries:
+
+/bin: Essential system binaries.
+/usr/bin: Non-privileged user binaries.
+/usr/local/bin: Third-party non-privileged user binaries.
+Users may have personal bin directories in their home directories (e.g., /home/bob/bin).
+Root-Restricted Binaries:
+
+/sbin: Essential system binaries for the root user.
+/usr/sbin: Non-privileged user system binaries.
+/usr/local/sbin: Third-party non-privileged user system binaries.
+Software Application Directories:
+
+Linux applications may have their files distributed across the filesystem.
+Executable program binary files may reside in /usr/bin, /usr/local/bin, or /opt/application/bin.
+Application data may be stored in /usr/share, /usr/lib, /opt/application, or /var/lib.
+Documentation files are typically in /usr/share/doc, /usr/share/man, or /usr/share/info.
+Global configuration files are often in subdirectories under /etc, while personalized configuration files may be in hidden user home directory subdirectories.
+Library Directories:
+
+Libraries containing shared code are located in directories ending with .so (shared object).
+Multiple versions of libraries may exist, often due to compatibility with different processor architectures.
+Libraries for essential binaries in /bin and /sbin are found in /lib or /lib64.
+Libraries for executables in /usr/bin and /usr/sbin are typically in /usr/lib or /usr/lib64.
+Third-party application libraries may reside in /usr/local/lib or /opt/application/lib.
+Variable Data Directories:
+
+/var and its subdirectories contain frequently changing data.
+Examples include /var/mail or /var/spool/mail for email data and /var/spool/cups for temporary print jobs.
+/var/log stores system and application log files.
+Log files can be useful for troubleshooting but should be monitored, as they can consume disk space rapidly and potentially lead to system issues if not managed correctly.
+Understanding these directory structures is crucial for system administrators, as it helps in managing users, software installations, libraries, and log files effectively. Additionally, proper disk space management is essential to prevent system crashes due to disk space exhaustion.
