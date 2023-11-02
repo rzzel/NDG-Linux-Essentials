@@ -1,13 +1,29 @@
-Among the standards supported by the Linux Foundation is the Filesystem Hierarchy Standard (FHS), which is hosted at the URL http://www.pathname.com/fhs/.
+The Filesystem Hierarchy Standard (FHS) is a set of guidelines for organizing the files and directories in a Linux filesystem. It provides a consistent and structured layout for directories, making it easier to manage and maintain Linux systems. The standard categorizes directories based on whether they are shareable on a network and whether their contents are static or variable. Here's a summary of the FHS hierarchy:
 
-A standard is a set of rules or guidelines that it is recommended to follow. However, these guidelines certainly can be broken, either by entire distributions or by administrators on individual machines.
+Root Hierarchy (/):
+/: The base of the filesystem, unifying all directories, including local partitions, removable devices, or network shares.
+/bin: Essential binaries, such as basic system commands (e.g., ls, cp, rm), part of the root filesystem.
+/boot: Contains files required for system booting, including the Linux kernel and associated configuration files.
+/dev: Contains files representing hardware devices and other special files (e.g., /dev/null, /dev/zero).
+/etc: Essential host configuration files (e.g., /etc/hosts, /etc/passwd).
+/home: User home directories.
+/lib: Essential libraries that support executables in /bin and /sbin.
+/lib64: Essential libraries built for specific architectures (e.g., /lib64 for 64-bit processors).
+/media: Mount point for removable media, automatically mounted.
+/mnt: Mount point for temporarily mounting filesystems manually.
+/opt: Optional location for third-party software installations.
+/proc: A virtual filesystem that provides kernel process information and other data.
+/root: Home directory of the root user.
+/sbin: Essential system binaries primarily used by the root user.
+/sys: A virtual filesystem for hardware device information.
+/srv: A location where site-specific services may be hosted.
+/tmp: Directory for all users to create temporary files, usually cleared at boot time (though not always).
+/usr: Second hierarchy for non-essential files used by multiple users.
+/usr/local: Third hierarchy for software not originating from the distribution.
+/var: Fourth hierarchy for files that change over time, including subdirectories like /var/cache, /var/log, /var/lock, /var/spool, and /var/tmp.
+The distinction between the four hierarchies is based on the essential nature of the directories for the system boot process. The root hierarchy is essential for booting, while /usr, /usr/local, and /var are considered non-essential for booting. In certain scenarios, such as booting into single-user mode for troubleshooting, only the root filesystem and its directories may be available.
 
-The FHS standard categorizes each system directory in a couple of ways:
-
-A directory can be categorized as either shareable or not, referring to whether the directory can be shared on a network and used by multiple machines.
-The directory is put into a category of having either static files (file contents won't change) or variable files (file contents can change).
-To make these classifications, it is often necessary to refer to subdirectories below the top level of directories. For example, the /var directory itself cannot be categorized as either shareable or not shareable, but one of its subdirectories, the /var/mail directory, is shareable. Conversely, the /var/lock directory should not be shareable.
-
-Not Shareable	Shareable
-Variable	/var/lock	/var/mail
-Static	/etc	/opt
+/usr: Intended to hold software for use by multiple users and is sometimes shared over the network and mounted as read-only.
+/usr/local: Reserved for software installations not originating from the distribution. Often used for software compiled from source code.
+/var: Contains files that change over time, including log files, temporary files, and cached application data. It is essential for maintaining system and application logs and state information.
+The FHS provides consistency and helps system administrators understand the organization of the filesystem, making it easier to locate and manage files and directories. However, as mentioned, these guidelines can be broken or customized based on specific distribution requirements or administrator preferences.
