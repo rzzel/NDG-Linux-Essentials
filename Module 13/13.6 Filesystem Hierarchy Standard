@@ -1,0 +1,13 @@
+Among the standards supported by the Linux Foundation is the Filesystem Hierarchy Standard (FHS), which is hosted at the URL http://www.pathname.com/fhs/.
+
+A standard is a set of rules or guidelines that it is recommended to follow. However, these guidelines certainly can be broken, either by entire distributions or by administrators on individual machines.
+
+The FHS standard categorizes each system directory in a couple of ways:
+
+A directory can be categorized as either shareable or not, referring to whether the directory can be shared on a network and used by multiple machines.
+The directory is put into a category of having either static files (file contents won't change) or variable files (file contents can change).
+To make these classifications, it is often necessary to refer to subdirectories below the top level of directories. For example, the /var directory itself cannot be categorized as either shareable or not shareable, but one of its subdirectories, the /var/mail directory, is shareable. Conversely, the /var/lock directory should not be shareable.
+
+Not Shareable	Shareable
+Variable	/var/lock	/var/mail
+Static	/etc	/opt
