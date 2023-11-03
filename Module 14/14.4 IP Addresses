@@ -1,0 +1,16 @@
+IPv4:
+
+IPv4 stands for Internet Protocol version 4.
+It uses 32-bit addresses written in the format of four sets of decimal numbers (e.g., 192.168.10.120).
+Each set in an IPv4 address is 8 bits, allowing for a maximum of 256 values (0-255).
+Due to its 32-bit addressing, IPv4 has a limited address space, approximately 4.3 billion unique addresses.
+The limited address space led to issues with IP address exhaustion.
+IPv6:
+
+IPv6 stands for Internet Protocol version 6.
+It uses 128-bit addresses, which are written as eight groups of four hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0042:1000:8a2e:0370:7334).
+IPv6's 128-bit addressing allows for an enormous number of unique addresses, making address exhaustion highly unlikely.
+Besides expanded address space, IPv6 offers various advanced features and improvements over IPv4, including better speed and more efficient data transportation.
+The transition from IPv4 to IPv6 has been slow due to factors such as the use of Network Address Translation (NAT) and the challenges of porting all devices to IPv6.
+NAT enables multiple devices within a private network to share a single public IP address, reducing the immediate need to migrate to IPv6.
+In summary, while IPv6 offers significant advantages over IPv4, the adoption of IPv6 has been slow due to the prevalence of IPv4 and the challenges involved in migrating to the new protocol. Nevertheless, experts anticipate that IPv6 will eventually replace IPv4 as the need for more IP addresses and advanced networking features grows. Understanding both IPv4 and IPv6 is important, especially for IT professionals, as IPv6 adoption continues to expand.
