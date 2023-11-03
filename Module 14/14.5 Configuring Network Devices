@@ -1,0 +1,9 @@
+When you are configuring network devices, there are two initial questions that you need to ask:
+
+Wired or wireless? Configuring a wireless device is slightly different to configuring a wired device because of some of the additional features typically found on wireless devices (such as security).
+
+DHCP or static address? Recall that a DHCP server provides network information, such as your IP address and subnet mask. If you don't make use of a DHCP server, then you will need to manually provide this information to your host, which is called using a static IP address.
+
+‌⁠​​⁠​ 
+Generally speaking, desktop machines use wired networks, while laptops use wireless networks. Normally a wired machine uses a static IP address, but these can also often be assigned via a DHCP server. In almost all cases, wireless machines use DHCP since they are almost always mobile and attached to different networks.
+
