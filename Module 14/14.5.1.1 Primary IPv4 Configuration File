@@ -1,0 +1,20 @@
+On a CentOS system, the primary configuration file for an IPv4 network interface is the /etc/sysconfig/network-scripts/ifcfg-eth0 file. The VM in this chapter is Debian-based, and so does not have the sysconfig folder. However, for demonstration purposes only, the following shows what this file looks like when configured for a static IP address
+
+root@localhost:~# cat /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE="eth0"
+BOOTPROTO=none
+NM_CONTROLLED="yes"
+ONBOOT=yes
+TYPE="Ethernet"
+UUID="98cf38bf-d91c-49b3-bb1b-f48ae7f2d3b5"
+DEFROUTE=yes
+IPV4 _FAILURE_FATAL=yes
+IPV6INOT=no
+NAME="System eth0"
+IPADDR=192.168.1.1
+PREFIX=24
+GATEWAY=192.168.1.1
+DNS1=192.168.1.2
+HWADDR=00:50:56:90:18:18
+LAST_CONNECT=1376319928
+If the device were configured to be a DHCP client, the BOOTPROTO value would be set to dhcp, and the IPADDR, GATEWAY and DNS1 values would not be set.
