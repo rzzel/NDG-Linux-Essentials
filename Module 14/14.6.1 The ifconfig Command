@@ -1,0 +1,12 @@
+elen:1000                              
+          RX bytes:25306 (25.3 KB)  TX bytes:690 (690.0 B)          
+lo        Link encap:Local Loopback                               
+          inet addr:127.0.0.1  Mask:255.0.0.0                       
+          inet6 addr: ::1/128 Scope:Host                           
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1                  
+          RX packets:6 errors:0 dropped:0 overruns:0 frame:0        
+          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0      
+          collisions:0 txqueuelen:0                                 
+          RX bytes:460 (460.0 B)  TX bytes:460 (460.0 B)
+The lo device is referred to as the loopback device. It is a special network device used by the system when sending network-based data to itself.
+The ifconfig command can also be used to modify network settings temporarily. Typically these changes should be permanent, so using the ifconfig command to make such changes is relatively rare.
