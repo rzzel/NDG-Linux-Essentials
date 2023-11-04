@@ -1,0 +1,21 @@
+A router or gateway allows hosts from one network to communicate with hosts on another network.
+
+The route command displays the kernel's IP routing table, which defines how network packets are forwarded.
+
+In the routing table, you can see entries for destination networks, gateways, netmasks, flags, metrics, and network interfaces.
+
+The "*" in the gateway field indicates that packets for the 192.168.1.0 network are sent directly to the destination without going through a gateway.
+
+The "default" entry with the gateway address of 192.168.1.1 serves as the default route for all other network packets.
+
+Using the -n option with the route command displays numeric data only, which can be useful to simplify the output.
+
+The ip route or ip route show command can also be used to display routing information and is becoming the preferred method in modern Linux distributions.
+
+The output of ip route or ip route show provides information similar to the route command but with a different format.
+
+The "0.0.0.0" entry refers to all other machines and is equivalent to the default route.
+
+The transition from route to ip route aligns with the trend of using the ip command for comprehensive network management tasks.
+
+The ip route command provides detailed routing information and is the recommended choice for viewing and configuring routing tables in modern Linux systems.
