@@ -1,0 +1,13 @@
+The ss command is a versatile tool designed to display socket statistics, making it easier to monitor network connections and their state. It is often considered a replacement for the older netstat command, but it provides more information and features. Here are some key points about the ss command:
+
+The primary use of the ss command is to view information about established connections between your local machine and remote hosts, as well as statistics about these connections.
+
+By default, running the ss command without options will display a list of active socket connections, including details like the socket type, state, data in the receive and send queues, and the local and remote addresses and ports.
+
+You can customize the output by specifying various options, such as -t for TCP sockets, -u for UDP sockets, or -l to display listening sockets.
+
+The ss -s option provides a summary of socket statistics, showing the total count and statistics for different socket types, including TCP and UDP.
+
+When dealing with extensive output from the ss command, consider piping it through a pager like less to make it more manageable. This allows you to scroll through the results and perform searches.
+
+The ss command is a powerful tool for network monitoring and diagnostics, offering detailed information about socket connections and their characteristics. It's a valuable utility for network administrators and anyone interested in understanding their network's current state.
