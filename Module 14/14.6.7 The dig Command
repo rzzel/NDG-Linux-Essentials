@@ -1,0 +1,31 @@
+There may be times when you need to test the functionality of the DNS server that your host is using. One way of doing this is to use the dig command, which performs queries on the DNS server to determine if the information needed is available on the server.
+
+In the following example, the dig command is used to determine the IP address of the example.com host:
+
+root@localhost:~# dig example.com                                              
+; <<>> DiG 9.8.1-P1 <<>> example.com                                          
+;; global options: +cmd                                                       
+;; Got answer:                                                                
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45155                     
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 0       
+                                                                              
+;; QUESTION SECTION:                                                          
+;example.com.                   IN      A                                     
+                                                                              
+;; ANSWER SECTION:                                                            
+example.com.            86400   IN      A       192.168.1.2                  
+;; AUTHORITY SECTION:                                                         
+example.com.            86400   IN      NS      example.com.                  
+                                                                              
+;; Query time: 0 msec                                                         
+;; SERVER: 127.0.0.1#53(127.0.0.1)                                            
+;; WHEN: Tue Dec  8 17:54:41 2015                                             
+;; MSG SIZE  rcvd: 59                                                          
+Note that the response included the IP address of 192.168.1.2, meaning that the DNS server has the IP address to hostname translation information in its database.
+
+If the DNS server doesn't have the requested information, it is configured to ask other DNS servers. If none of them have the requested information, an error message displays:
+
+root@localhost:~# dig sample.com                                            
+; <<>> DiG 9.8.1-P1 <<>> sample.com                                           
+;; global options: +cmd 
+;; connection timed out; no servers could be reached
