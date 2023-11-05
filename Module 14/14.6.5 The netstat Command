@@ -1,0 +1,59 @@
+The netstat command is a powerful tool that provides a large amount of network information. It can be used to display information about network connections as well as display the routing table similar to the route command.
+
+For example, to display statistics regarding network traffic, use the -i option to the netstat command:
+
+root@localhost:~# netstat -i                                                  
+Kernel Interface table                                                        
+Iface   MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+eth0       1500 0       137      0      4 0        12      0      0      0 BMRU
+lo        65536 0        18      0      0 0        18      0      0      0 LRU
+The most important statistics from the output above are the TX-OK and TX-ERR. A high percentage of TX-ERR may indicate a problem on the network, such as too much network traffic.
+
+To use the netstat command to display routing information, use the -r option:
+
+root@localhost:~# netstat -r                                                  
+Kernel IP routing table                                                       
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+192.168.1.0     *               255.255.255.0   U         0 0          0 eth0 
+default         192.168.1.1     0.0.0.0        UG         0 0          0 eth0 
+The netstat command is also commonly used to display open ports. A port is a unique number that is associated with a service provided by a host. If the port is open, then the service is available for other hosts.
+
+For example, you can log into a host from another host using a service called SSH. The SSH service is assigned port #22. So, if port #22 is open, then the service is available to other hosts.
+
+It is important to note that the host also needs to have the services running itself; this means that the service (in this case the ssh daemon) that allows remote users to log in needs to be started (which it typically is, for most Linux distributions).
+
+To see a list of all currently open ports, use the following command:
+
+root@localhost:~# netstat -tln                                                
+Active Internet connections (only servers)                                    
+Proto Recv-Q Send-Q Local Address           Foreign Address         State     
+tcp        0      0 192.168.1.2:53          0.0.0.0:*               LISTEN    
+tcp        0      0 127.0.0.1:53            0.0.0.0:*               LISTEN    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN    
+tcp        0      0 127.0.0.1:953           0.0.0.0:*               LISTEN    
+tcp6       0      0 :::53                   :::*                    LISTEN    
+tcp6       0      0 :::22                  :::*                    LISTEN   
+tcp6       0      0 ::1:953                 :::*                    LISTEN    
+As you can see from the output above, port #22 is listening, which means it is open.
+
+In the previous example, -t stands for TCP (recall this protocol from earlier in this chapter), -l stands for listening (which ports are listening) and -n stands for show numbers, not names.
+
+Sometimes showing the names can be more useful. This can be achieved by dropping the -n option:
+
+root@localhost:~# netstat -tl                                                   
+Active Internet connections (only servers)                                      
+Proto Recv-Q Send-Q Local Address           Foreign Address          State     
+tcp        0      0 cserver.example.:domain *:*                     LISTEN    
+tcp        0      0 localhost:domain        *:*                     LISTEN    
+tcp        0      0 *:ssh                   *:*                     LISTEN    
+tcp        0      0 localhost:953           *:*                     LISTEN    
+tcp6       0      0 [::]:domain             [::]:*                  LISTEN    
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN    
+tcp6       0      0 localhost:953           [::]:*                  LISTEN    
+On some distributions you may see the following message in the man page of the netstat command:
+
+NOTE
+     This program is obsolete. Replacement for netstat is ss. Replacement for 
+     netstat -r is ip route. Replacement for netstat -i is ip -s link. 
+     Replacement for netstat -g is ip maddr.
+While no further development is being done on the netstat command, it is still an excellent tool for displaying network information. The goal is to eventually replace the netstat command with commands such as the ss and ip commands. However, it is important to realize that this may take some time.
