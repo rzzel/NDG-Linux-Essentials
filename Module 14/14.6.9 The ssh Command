@@ -1,0 +1,19 @@
+The ssh command allows you to connect to another machine across the network, log in and then perform tasks on the remote machine.
+
+If you only provide a machine name or IP address to log into, the ssh command assumes you want to log in using the same username that you are currently logged in as. To use a different username, use the syntax:
+
+username@hostname
+root@localhost:~# ssh bob@test
+The authenticity of host ‘test (127.0.0.1)’ can’t be established.
+RSA key fingerprint is c2:0d:ff:27:4c:f8:69:a9:c6:3e:13:da:2f:47:e4:c9.
+Are you sure you want to continue connection (yes/no)? yes
+Warning: Permanently added ‘test’ (RSA) to the list of known hosts.
+bob@test’s password:
+bob@test:~$ date
+Fri Oct   4 16:14:43 CDT 2013                                            
+To return back to the local machine, use the exit command:
+
+bob@test:~$ exit
+logout
+Connection to test closed.
+root@localhost:~#
