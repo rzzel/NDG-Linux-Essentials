@@ -1,0 +1,37 @@
+The id command is a handy tool to retrieve user and group information. Let's break down its usage:
+
+Current User Information:
+
+sysadmin@localhost:~$ id
+uid=1001(sysadmin) gid=1001(sysadmin) groups=1001(sysadmin),4(adm),27(sudo)
+uid=1001(sysadmin): User ID and username for the current user.
+gid=1001(sysadmin): Primary group ID and name for the current user.
+groups=1001(sysadmin),4(adm),27(sudo): Additional groups the user belongs to.
+
+Information for a Specific User:
+
+sysadmin@localhost:~$ id root
+uid=0(root) gid=0(root) groups=0(root)
+
+Displays information for the specified user, in this case, 'root.'
+Print Primary Group ID:
+
+sysadmin@localhost:~$ id -g
+1001
+
+Prints only the user's primary group ID.
+Verify Secondary Group Memberships:
+
+sysadmin@localhost:~$ id -G
+1001 4 27
+Prints all groups the user belongs to, both primary and secondary.
+
+Check Group Memberships in /etc/group:
+
+sysadmin@localhost:~$ cat /etc/group | grep sysadmin
+adm:x:4:syslog,sysadmin
+sudo:x:27:sysadmin
+sysadmin:x:1001:
+
+Verifies the user's group memberships by checking the /etc/group file.
+The id command is versatile and helps users understand their own or another user's identity on the system, along with group affiliations.
