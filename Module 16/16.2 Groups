@@ -1,0 +1,12 @@
+The most common reason to create a group is to provide a way for users to share files. For example, if several people who work together on the same project and need to be able to collaborate on documents stored in files for the project. In this scenario, the administrator can make these people members of a common group, change the directory ownership to the new group and set permissions on the directory that allows members of the group to access the files.
+
+After creating or modifying a group, you can verify the changes by viewing the group configuration information in the /etc/group file with the grep command. If working with network-based authentication services, then the getent command can show you both local and network-based groups.
+
+grep pattern filename
+getent database record
+For local usage, these commands show the same result, in this case for the root group:
+
+root@localhost:~# grep root /etc/group
+root:x:0:
+root@localhost:~# getent group root
+root:x:0:
