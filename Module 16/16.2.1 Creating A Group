@@ -1,0 +1,10 @@
+The groupadd command can be executed by the root user to create a new group. The command requires only the name of the group to be created. The -g option can be used to specify a group id for the new group:
+
+root@localhost:~# groupadd -g 1005 research
+root@localhost:~# grep research /etc/group
+research:x:1005:
+If the -g option is not provided, the groupadd command will automatically provide a GID for the new group. To accomplish this, the groupadd command looks at the /etc/group file and uses a number that is one value higher than the current highest GID number. The execution of the following commands illustrates this:
+
+root@localhost:~# groupadd development
+root@localhost:~# grep development /etc/group
+development:x:1006:
