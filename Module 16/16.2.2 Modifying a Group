@@ -1,0 +1,28 @@
+The who command provides a quick overview of the users currently logged into the system. Let's break down the example you provided:
+
+sysadmin@localhost:~$ who
+root     	tty2        2013-10-11 10:00
+sysadmin	tty1        2013-10-11 09:58 (:0)
+sysadmin 	pts/0       2013-10-11 09:59 (:0.0)
+sysadmin 	pts/1       2013-10-11 10:00 (example.com)
+
+Username:
+
+root: The superuser/root is logged in on tty2.
+sysadmin: Regular user sysadmin is logged in on tty1, pts/0, and pts/1.
+Terminal:
+
+tty2: Indicates a local command line terminal.
+tty1, pts/0, pts/1: Indicates local and pseudo-terminals for user sessions.
+Date and Time:
+
+Displays when each user logged in.
+Host (Location):
+
+example.com: Indicates a remote login from this host.
+:0: Indicates a local graphical login.
+Considerations:
+
+The who command has options like -b (last system boot time) and -r (current runlevel) for additional system status information.
+
+The w command provides a more detailed list of users and system status, including load averages, idle times, and current processes.
