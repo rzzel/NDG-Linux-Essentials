@@ -1,0 +1,7 @@
+If you decide to delete a group with the groupdel command, be aware that any files that are owned by that group will become orphaned.
+
+Only supplemental groups can be deleted, so if any group that is the primary group for any user, it cannot be deleted. The administrator can modify which group is a user's primary group, so a group that was being used as a primary group can be made into a supplemental group and then can be deleted.
+
+As long as the group to be deleted is not a user's primary group, deleting the group is accomplished by using the groupdel command along with the name of the group:
+
+root@localhost:~# groupdel clerks
