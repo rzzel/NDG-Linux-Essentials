@@ -1,0 +1,60 @@
+The -D option in the useradd command allows you to view or modify default values used when creating new user accounts. It provides an easy way to set system-wide defaults. The information shown by useradd -D reflects the current default settings:
+
+root@localhost:~# useradd -D 
+GROUP=100
+HOME=/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+
+Let's break down each of these default values:
+
+Group (GROUP):
+
+Default primary group for a new user if not specified during user creation.
+Default: 100 (usually the users group with GID 100).
+Example: bob:x:600:600:bob:/home/bob:/bin/bash.
+Home (HOME):
+
+Default base directory under which the user's home directory is created.
+Default: /home.
+Example: bob:x:600:600:bob:/home/bob:/bin/bash.
+Inactive (INACTIVE):
+
+Number of days after the password expires that the account is disabled.
+Default: -1 (not enabled by default).
+Example: bob:pw:15020:5:30:7:60:15050:.
+Expire (EXPIRE):
+
+Expiration date for the account.
+Default: Empty (no expiration date set by default).
+Example: bob:pw:15020:5:30:7:60:15050:.
+Shell (SHELL):
+
+Default shell for a user when they log in.
+Default: /bin/bash.
+Example: bob:x:600:600:bob:/home/bob:/bin/bash.
+Skeleton Directory (SKEL):
+
+Directory whose contents are copied into the new user’s home directory.
+Default: /etc/skel.
+Create Mail Spool (CREATE_MAIL_SPOOL):
+
+Whether to create a mail spool for users.
+Default: yes.
+Example: CREATE_MAIL_SPOOL=yes.
+To modify these default values, you can edit the /etc/default/useradd file directly or use the useradd -D command followed by the options you want to change. For example:
+
+root@localhost:~# useradd -D -f 30
+root@localhost:~# useradd -D
+GROUP=100
+HOME=/home
+INACTIVE=30
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+
+In this example, the -f option is used to set the default INACTIVE value to 30. This means that after a user's password expires, the account will be disabled after 30 days if the password is not changed.
