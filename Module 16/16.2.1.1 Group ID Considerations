@@ -1,0 +1,9 @@
+In some Linux distributions, particularly those based upon Red Hat, when a user ID (UID) is created, a user private group (UPG) is also created with that user as its only member. In these distributions, the UID and the ID of the UPG are supposed to match (be the same number).
+
+Therefore, you should avoid creating GIDs in the same numeric ranges where you expect to create UIDs, to avoid a conflict between a GID you create and a UPG number that is created to match a UID.
+
+GIDs under either 500 (RedHat) or 1000 (Debian) are reserved for system use. There may be times at which you want to assign a lower GID value. To accomplish this, use the -r option which assigns the new group a GID that is less than the lowest standard GID:
+
+root@localhost:~# groupadd -r sales
+root@localhost:~# getent group sales
+sales:x:999:
