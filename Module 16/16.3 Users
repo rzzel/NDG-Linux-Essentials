@@ -1,0 +1,7 @@
+User account information is stored in the /etc/passwd file and user authentication information (password data) is stored in the /etc/shadow file. Creating a new user can be accomplished by manually adding a new line to each of these files, but that is generally not the recommended technique.
+
+By using an appropriate command to add a new user, these files can be modified automatically and safely. If you were to modify these files manually, you would risk making a mistake that could prevent all users from being able to log in normally.
+
+Before you begin creating users for your system, you should verify or establish practical values that are used by default with the useradd command. These settings can be found in the configuration files that are used by the useradd command.
+
+Ensuring that the values in these configuration files are reasonable before adding users can help save you the time and trouble of having to correct user account settings after adding the users.
