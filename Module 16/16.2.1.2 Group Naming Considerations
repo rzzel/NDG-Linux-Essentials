@@ -1,0 +1,6 @@
+Following these guidelines for group names can help to select a group name that is portable (function correctly with other systems or services):
+
+The first character of the name should be either an underscore _ character or a lowercase alphabetic a-z character.
+Up to 32 characters are allowed on most Linux distributions, but using more than 16 can be problematic as some distributions may not accept more than 16.
+After the first character, the remaining characters can be alphanumeric, a dash - character or an underscore _ character.
+The last character should not be a hyphen - character.
