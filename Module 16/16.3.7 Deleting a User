@@ -1,0 +1,10 @@
+The userdel command is used to delete users. When you delete a user account, you also need to decide whether to delete the user's home directory. The user's files may be important to the organization, and there may even be legal requirements to keep the data for a certain amount of time, so be careful not to make this decision lightly. Also, unless you've made backup copies of the data, once you've executed the command to delete the user and their files, there is no reversing the action.
+
+To delete the user jane without deleting the user's home directory /home/jane, execute:
+
+root@localhost:~# userdel jane
+Beware that deleting a user without deleting their home directory means that the user's home directory files will be orphaned and these files will be owned solely by their former UID and GID.
+
+To delete the user, home directory, and mail spool as well, use the -r option:
+
+root@localhost:~# userdel -r jane
