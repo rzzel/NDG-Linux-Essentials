@@ -1,0 +1,30 @@
+The newgrp command in Linux allows a user to temporarily change their current primary group. If you know that the file you're about to create should belong to a group different from your current primary group, you can use newgrp to switch to that group for the duration of your session. Here's how you can use newgrp:
+
+newgrp group_name
+
+After executing this command, you will be prompted to enter the password for the specified group. Once authenticated, your primary group will be temporarily changed to the specified group.
+
+To check your group memberships, you can use the groups command:
+
+groups
+
+This will list all the groups you are currently a member of.
+
+Here's an example scenario:
+
+sysadmin@localhost:~$ id
+uid=1001(sysadmin) gid=1001(sysadmin) groups=1001(sysadmin),4(adm),27(sudo),1005(research),1006(development)
+
+sysadmin@localhost:~$ newgrp research
+Password: [Enter the password for the 'research' group]
+
+sysadmin@localhost:~$ id
+uid=1001(sysadmin) gid=1005(research) groups=1005(research),4(adm),27(sudo),1001(sysadmin),1006(development)
+
+In this example, the newgrp command is used to switch to the 'research' group temporarily. The id command is then used to verify the change in the primary group.
+
+Remember that the changes made by newgrp are temporary and apply only to the current session. To permanently change the primary group of a user, the usermod command should be used, typically by a user with administrative privileges:
+
+sudo usermod -g new_primary_group username
+
+Replace new_primary_group with the desired group and username with the actual username.
