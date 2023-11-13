@@ -1,0 +1,36 @@
+Understanding file ownership in Linux is crucial for managing permissions effectively. Here are some key points regarding file ownership:
+
+User Ownership:
+
+Each file is associated with a user owner, identified by the user's UID (User ID).
+
+The UID is a numerical identifier, and the association with a username is done by the operating system.
+
+Changing a user's UID or deleting the user may result in files owned by that user having no real user owner.
+
+The id command provides information about the current user's identity, including UID, GID (primary group), and supplementary groups.
+
+sysadmin@localhost:~$ id
+uid=1001(sysadmin) gid=1001(sysadmin) groups=1001(sysadmin),4(adm),27(sudo),1005(research),1006(development)
+Group Ownership:
+
+Every file also has a group owner, identified by the group's GID (Group ID).
+By default, the primary group of the user who creates the file becomes the group owner.
+Users can change the group owner of their files to any group they belong to.
+Similar to user ownership, the association with a group is done by GID, not by name.
+User Private Groups (UPG):
+
+When a user and their primary group have the same numeric identifier and name, it indicates a User Private Group (UPG).
+File Listing with Ownership:
+
+The ls -l command provides a long listing that includes ownership information.
+
+sysadmin@localhost:~$ ls -l /tmp/filetest1
+-rw-rw-r--. 1 sysadmin sysadmin 0 Oct 21 10:18 /tmp/filetest1
+Hidden Files:
+
+Hidden files (those starting with a dot .) are listed using the ls -a option.
+
+Ownership applies to hidden files as well, and ownership details can be listed using ls -la.
+
+sysadmin@localhost:~$ ls -la
