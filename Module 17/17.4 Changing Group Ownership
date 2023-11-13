@@ -1,0 +1,30 @@
+To change the group owner of an existing file the chgrp command can be used.
+
+chgrp group_name file
+As the root user, the chgrp command can be used to change the group owner of any file to any group. As a user without administrative privileges, the chgrp command can only be used to change the group owner of a file to a group that the user is already a member of:
+
+sysadmin@localhost:~$ touch sample                                            
+sysadmin@localhost:~$ ls -l sample                                            
+-rw-rw-r-- 1 sysadmin sysadmin 0 Oct 23 22:12 sample‌⁠​​⁠​                           
+sysadmin@localhost:~$ chgrp research sample
+sysadmin@localhost:~$ ls -l sample 
+-rw-rw-r--. 1 sysadmin research 0 Oct 23 22:12 sample‌⁠​​⁠​ 
+If a user attempts to modify the group ownership of a file that the user doesn't own, they receive an error message:
+
+sysadmin@localhost:~$ chgrp development /etc/passwd
+chgrp: changing group of '/etc/passwd': Operation not permitted
+To change the group ownership of all of the files of a directory structure, use the recursive -R option to the chgrp command. For example, the command in the following example would change the group ownership of the test_dir directory and all files and subdirectories of the test_dir directory.
+
+sysadmin@localhost:~$ chgrp -R development test_dir
+Consider This
+
+While you can view the ownership of a file with the -l option to the ls command, the system provides another command that is useful when viewing ownership and file permissions: the stat command. The stat command displays more detailed information about a file, including providing the group ownership both by group name and GID number:
+
+sysadmin@localhost:~$ stat /tmp/filetest1
+  File: `/tmp/filetest1'
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: fd00h/64768d	Inode: 31477       Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1001/sysadmin)   Gid: ( 1001/sysadmin) 
+Access: 2013-10-21 10:18:02.809118163 -0700
+Modify: 2013-10-21 10:18:02.809118163 -0700
+Change: 2013-10-21 10:18:02.809118163 -0700
