@@ -1,0 +1,15 @@
+Question: True or False: Based on the following information the user bob can successfully execute the following command: more /data/abc.txt?
+
+Note that the /data directory has different user and group owners than the previous example
+drwxr-xr-x. 17 root root 4096 23:38 /
+dr-xr-x---. 10 bob  bob  128  03:38 /data
+----rw-rwx.  1 bob  bob  100  21:08 /data/abc.txt
+
+Answer: False.
+
+Explanation: Recall that if you are the owner of a file, then the only permissions that are checked are the user owner permissions. In this case, that would be --- for bob on the /data/abc.txt file.
+
+In this case, members of the bob group and "others" have more permissions on the file than bob has.
+
+Lesson Learned: Don't provide permissions to the group owner and "others" without applying at least the same level of access to the owner of the file.
+
