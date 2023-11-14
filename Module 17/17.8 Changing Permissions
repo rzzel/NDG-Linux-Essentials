@@ -1,0 +1,12 @@
+The chmod (change mode) command is used to change permissions on files and directories. There are two techniques that can be used with this command: symbolic and numeric. Both techniques use the following basic syntax:
+
+chmod new_permission file_name
+Important
+
+To change a file's permissions, you either need to own the file or log in as the root user.
+
+The following examples will use a sample file:
+
+root@localhost:~# touch abc.txt
+root@localhost:~# ls -l abc.txt                                                 
+-rw-r--r-- 1 root root 0 Dec 19 18:58 abc.txt
