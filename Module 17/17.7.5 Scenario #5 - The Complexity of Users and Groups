@@ -1,0 +1,16 @@
+Question: True or False: Based on the following information the user bob can successfully execute the following command: more /data/abc.txt?
+
+Note that the /data directory has different user and group owners than previous examples
+drwxr-xr-x. 17 root root    4096 23:38 /
+dr-xr-x---. 10 sue  payroll 128  03:38 /data
+-rwxr-xr--.  1 bob  bob     100  21:08 /data/abc.txt
+
+Answer: Not enough information to determine.
+
+Explanation: In order to access the /data/abc.txt file, the user bob needs to be able to "get into" the /data directory. This requires x permission, which bob may or may not have, depending on whether he is a member of the payroll group.
+
+If bob is a member of the payroll group, then his permissions on the /data directory are r-x, and the command more will execute successfully (bob also needs x on / and r on abc.txt, which he already has).
+
+If he isn't a member of the payroll group, his permissions on the /data directory are ---, and the more command will fail.
+
+Lesson Learned: You must look at each file and directory permissions separately and be aware of which groups the user account belongs to.
