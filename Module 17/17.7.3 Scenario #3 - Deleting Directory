@@ -1,0 +1,14 @@
+Question: Based on the following information, who can delete the /data/abc.txt file?
+
+drwxr-xr-x. 17 root root 4096 23:38 /
+drwxrw-rw-. 10 root root 128  03:38 /data
+-rwxr-xr--.  1 bob  bob  100  21:08 /data/abc.txt
+
+Answer: Only the root user.
+
+Explanation: A user needs no permissions at all on the file itself to delete a file. The w permission on the directory that the file is stored in is required to delete a file in a directory. Based on that, it would seem that all users could delete the /data/abc.txt file, since everyone has w permission on the directory.
+
+‌⁠​​⁠​ 
+However, to delete a file, you must also be able to "get into" the directory. Since only the root user has x permission on the /data directory, only root can "get into" that directory to delete files in this directory.
+
+Lesson Learned: The w permission allows a user to delete files from a directory, but only if the user also has x permission on the directory.
