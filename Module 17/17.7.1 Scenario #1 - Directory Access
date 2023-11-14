@@ -1,0 +1,5 @@
+Question: Based on the following information, what access would the user bob have on the file abc.txt?
+
+drwxr-xr-x. 17 root root 4096 23:38 /
+drwxr-xr--. 10 root root 128  03:38 /data
+-rwxr-xr--.  1 bob  bob  100  21:08 /data/abc.txt
