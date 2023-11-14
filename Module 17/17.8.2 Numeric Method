@@ -1,0 +1,29 @@
+The numeric method (octal method) provides a concise way to represent and modify permissions by assigning numeric values to each permission type. It's particularly useful when you need to make more drastic changes to permissions on a file. Here's a breakdown of the example you provided:
+
+Setting Permissions to rwxr-xr-- Using Numeric Method:
+To set the permissions of a file named abc.txt to be rwxr-xr--:
+
+root@localhost:~# chmod 754 abc.txt
+root@localhost:~# ls -l abc.txt
+-rwxr-xr-- 1 root root 0 Dec 19 18:58 abc.txt
+chmod 754 abc.txt: The numbers 754 represent the permissions for user owner, group owner, and others, respectively.
+User owner (7): Read (4) + Write (2) + Execute (1) = 7
+Group owner (5): Read (4) + Execute (1) = 5
+Others (4): Read (4)
+
+The ls -l command verifies the changes.
+Consideration: Using stat for Detailed Permission Information:
+You mentioned using the stat command, which provides more detailed information than ls -l. It shows both symbolic and numeric methods for permissions. Here's an example snippet:
+
+sysadmin@localhost:~$ stat /tmp/filetest1
+  File: `/tmp/filetest1'
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: fd00h/64768d	Inode: 31477       Links: 1
+Access: (0664/-rw-rw-r--)  Uid: (  502/sysadmin)   Gid: (  503/sysadmin)
+Access: 2013-10-21 10:18:02.809118163 -0700
+Modify: 2013-10-21 10:18:02.809118163 -0700
+Change: 2013-10-21 10:18:02.809118163 -0700
+
+The (0664/-rw-rw-r--) line shows both the symbolic (-rw-rw-r--) and numeric (0664) representations of permissions.
+This provides a comprehensive view of the file's permissions using both methods.
+In summary, the numeric method is efficient for making significant changes to permissions, and the stat command can be valuable for obtaining detailed information on file attributes.
