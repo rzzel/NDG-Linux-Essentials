@@ -1,0 +1,13 @@
+Question: Based on the following information, who can use the ls command to display the contents of the /data directory (ls /data)?
+
+drwxr-xr-x. 17 root root 4096 23:38 /
+drwxr-xr--. 10 root root 128  03:38 /data
+-rwxr-xr--.  1 bob  bob  100  21:08 /data/abc.txt
+
+Answer: All users.
+
+Explanation: All that is required to be able to view a directory's contents is r permission on the directory (and the ability to access the parent directories). The x permission for all users in the / directory means all users can use / as part of a path, so everyone can get through the / directory to get to the /data directory. The r permission for all users in the /data directory means all users can use the ls command to view the contents. This includes hidden files, so the ls -a command also works on this directory.
+
+However, note that in order to see file details (ls -l), the directory would also require x permission. So while the root user and members of the root group have this access on the /data directory, no other users would be able to execute ls -l /data.
+
+Lesson Learned: The r permission allows a user to view a listing of the directory.
