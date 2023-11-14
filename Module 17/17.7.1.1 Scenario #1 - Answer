@@ -1,0 +1,12 @@
+Question: Based on the following information, what access would the user bob have on the file abc.txt?
+
+drwxr-xr-x. 17 root root 4096 23:38 /
+drwxr-xr--. 10 root root 128  03:38 /data
+-rwxr-xr--.  1 bob  bob  100  21:08 /data/abc.txt
+Answer: None.
+
+Explanation: Initially it would appear that the user bob can view the contents of the abc.txt file as well as copy the file, modify its contents and run it like a program. This erroneous conclusion would be the result of looking solely at the file's permissions (rwx for the user bob in this case).
+
+However, to do anything with the file, the user must first "get into" the /data directory. The permissions for bob for the /data directory are the permissions for "others" (r--), which means bob can't even use the cd command to get into the directory. If the execute permission (--x) were set for the directory, then the user bob would be able to "get into" the directory, meaning the permissions of the file itself would apply.
+
+Lesson Learned: The permissions of all parent directories must be considered before considering the permissions on a specific file.
