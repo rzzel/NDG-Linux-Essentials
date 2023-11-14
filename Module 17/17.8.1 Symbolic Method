@@ -1,0 +1,31 @@
+The chmod command is used to change the permissions of a file in Unix-like operating systems. The symbolic method you mentioned is a convenient way to modify permissions. Here's a breakdown of the examples you provided:
+
+Granting Write Permission to the Group Owner:
+To give the group owner write permission on a file named abc.txt:
+
+
+root@localhost:~# chmod g+w abc.txt
+root@localhost:~# ls -l abc.txt
+-rw-rw-r-- 1 root root 0 Dec 19 18:58 abc.txt
+g+w: Adds (+) write (w) permission to the group owner (g).
+The ls -l command verifies the changes.
+
+Combining Changes - Adding Execute to User and Group, Removing Read from Others:
+To add execute permission to the user owner and group owner and remove read permission from others:
+
+root@localhost:~# chmod ug+x,o-r abc.txt
+root@localhost:~# ls -l abc.txt
+-rwxrwx--- 1 root root 0 Dec 19 18:58 abc.txt
+ug+x,o-r: Adds (+x) execute permission to the user owner (u) and group owner (g), and removes (-r) read permission from others (o).
+The ls -l command verifies the changes.
+
+Using the Equals Sign to Set Exact Permissions for the User Owner:
+To give the user owner only read and execute permissions, removing the write permission:
+
+root@localhost:~# chmod u=rx abc.txt
+root@localhost:~# ls -l abc.txt
+-r-xrwx--- 1 root root 0 Dec 19 18:58 abc.txt
+u=rx: Sets (=) read (r) and execute (x) permissions for the user owner (u), removing other permissions.
+
+The ls -l command verifies the changes.
+These examples demonstrate how to use the symbolic method with the chmod command to modify file permissions selectively.
