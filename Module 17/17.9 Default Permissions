@@ -1,0 +1,46 @@
+The umask command is a feature that is used to determine default permissions that are set when a file or directory is created. Default permissions are determined when the umask value is subtracted from the maximum allowable default permissions. The maximum default permissions are different for files and directories:
+
+file	rw-rw-rw-
+directories	rwxrwxrwx
+The permissions that are initially set on a file when it is created cannot exceed rw-rw-rw-. To have the execute permission set on a file, you first need to create the file and then change the permissions.
+
+The umask command can be used to display the current umask value:
+
+sysadmin@localhost:~$ umask
+0002
+A breakdown of the output:
+
+The first 0 indicates that the umask is given as an octal number.
+The second 0 indicates which permissions to subtract from the default user owner's permissions.
+The third 0 indicates which permissions to subtract from the default group owner's permissions.
+The last number 2 indicates which permissions to subtract from the default other's permissions.
+Note that different users may have different umasks. Typically the root user has a more restrictive umask than normal user accounts:
+
+root@localhost:~# umask
+0022
+To understand how umask works, assume that the umask of a file is set to 027 and consider the following:
+
+File Default	666
+Umask	-027
+Result	640
+The 027 umask means that new files would receive 640 or rw-r----- permissions by default, as demonstrated below:
+
+sysadmin@localhost:~$ umask 027
+sysadmin@localhost:~$ touch sample
+sysadmin@localhost:~$ ls -l sample
+-rw-r-----. 1 sysadmin sysadmin 0 Oct 28 20:14 sample
+Because the default permissions for directories are different than for files, a umask of 027 would result in different initial permissions on new directories:
+
+Directory Default	777
+Umask	-027
+Result	750
+The 027 umask means that directories files would receive 750 or rwxr-x--- permissions by default, as demonstrated below:
+
+sysadmin@localhost:~$ umask 027
+sysadmin@localhost:~$ mkdir test-dir
+sysadmin@localhost:~$ ls -ld test-dir
+drwxr-x---. 1 sysadmin sysadmin 4096 Oct 28 20:25 test-dir
+The new umask is only applied to file and directories created during that session. When a new shell is started, the default umask will again be in effect.
+
+Permanently changing a user's umask requires modifying the .bashrc file located in that user's home directory.
+
