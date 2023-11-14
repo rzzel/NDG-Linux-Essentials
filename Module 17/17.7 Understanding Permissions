@@ -1,0 +1,9 @@
+The descriptions of the permission types can be handy, but just themselves, they don't provide a clear description of how permissions work. To better understand how permissions work, consider the following scenarios.
+
+To understand these scenarios, you should first understand the following diagram:
+
+drwxr-xr-x. 17 root root 4096 23:38 /
+drwxr-xr-x. 10 root root 128  03:38 /data
+-rwxr-xr--.  1 bob  bob  100  21:08 /data/abc.txt
+‌⁠​​⁠​ 
+The relevant information is highlighted. The first line represents the / directory, with a user owner of root, a group owner of root and permissions of rwxr-xr-x. The second line represents the /data directory, a directory that is under the / directory. The third line represents the abc.txt file, which is stored in the /data directory.
