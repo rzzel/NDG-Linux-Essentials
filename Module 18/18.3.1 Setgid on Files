@@ -1,0 +1,14 @@
+The setgid permission on a file is very similar to setuid; it allows a user to run an executable binary file in a manner that provides them additional (temporary) group access. The system allows the user running the command to effectively belong to the group that owns the file, but only in the setgid program.
+
+A good example of the setgid permission on an executable file is the /usr/bin/wall command. Notice the permissions for this file as well as the group owner:
+
+sysadmin@localhost:~$ ls -l /usr/bin/wall
+-rwxr-sr-x 1 root tty 30800 May 16  2018 /usr/bin/wall
+You can see that this file is setgid by the presence of the s in the group's execute position. Due to this executable being owned by the tty group, when a user executes this command, the command is able to access files that are group owned by the tty group.
+
+This access is important because the /usr/bin/wall command sends messages to terminals, which is accomplished by writing data to files like the following:
+
+sysadmin@localhost:~$ ls -l /dev/tty?
+crw--w----. 1 root tty  4, 0 Mar 29  2013 /dev/tty0
+crw--w----. 1 root tty  4, 1 Oct 21 19:57 /dev/tty1
+Note that the tty group has write permission on the files above while users who are not in the tty group ("others") have no permissions on these files. Without the setgid permission, the /usr/bin/wall command would fail.
