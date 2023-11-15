@@ -1,0 +1,38 @@
+Setuid Permission:
+Definition: When the setuid (set user ID) permission is set on an executable binary file, the binary file is executed with the privileges of the owner of the file, not the user who executes it.
+
+Use Case: It is often used on system utilities to allow normal users to run specific programs with elevated privileges, such as modifying system files owned by root.
+
+Example Scenario:
+
+A regular user (sysadmin) attempts to view the contents of /etc/shadow and gets a "Permission denied" error.
+The passwd command, which modifies /etc/shadow, seems to work for the same user.
+Identifying Setuid Permission:
+Command: The ls -l command displays the setuid permission as an s in the owner's execute permission position.
+
+sysadmin@localhost:~$ ls -l /usr/bin/passwd
+-rwsr-xr-x 1 root root 31768 Jan 28 2010 /usr/bin/passwd
+The lowercase s indicates both setuid and execute permission, while an uppercase S would mean setuid without execute permission.
+
+Modifying Setuid Permission:
+Symbolic Method:
+
+To add setuid permission: chmod u+s file
+To remove setuid permission: chmod u-s file
+Numeric Method:
+
+To add setuid permission: chmod 4000 file
+To remove setuid permission: chmod 0 file
+Combining with Other Permissions:
+
+Use the chmod command to modify permissions, either by specifying the complete permission set or by manipulating specific bits.
+Important Notes:
+Special Permissions with Octal Method:
+When using the three-digit octal method, if the first digit is not provided (e.g., chmod 755 file), the command assumes the first digit is 0, and special permissions are not affected.
+To explicitly set special permissions, use four digits in the octal code.
+Understanding setuid permission is crucial for managing access and security on a Unix-like system. The provided information explains its purpose, how to identify it, and methods to modify it effectively.
+
+
+
+
+
