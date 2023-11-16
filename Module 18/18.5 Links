@@ -1,0 +1,9 @@
+Consider a scenario where there is a file deeply buried in the file system called:
+
+/usr/share/doc/superbigsoftwarepackage/data/2013/october/tenth/valuable-information.txt
+Another user routinely updates this file, and you need to access it regularly. The long file name is a not an ideal choice for you to type, but the file must reside in this location. It is also updated frequently, so you can't simply make a copy of the file.
+
+In a situation like this, links come in handy. You can create a file that is linked to the one that is deeply buried. This new file could be placed in the home directory or any other convenient location. When you access the linked file, it accesses the contents of the valuable-information.txt file.
+
+Each linking method, hard and symbolic, results in the same overall access, but uses different techniques. There are pros and cons to each method, so knowing both techniques and when to use them is important.
+
