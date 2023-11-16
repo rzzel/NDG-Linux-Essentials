@@ -1,0 +1,53 @@
+Inode Table:
+
+For every file created, there is an associated block of data on the file system that stores metadata, known as the inode table.
+Metadata includes information like permissions, ownership, timestamps, but not the file name or contents.
+The inode table also contains pointers to data blocks where the actual file data is stored.
+Inode Number:
+
+Every file on a partition is identified by a unique inode number.
+The ls -i command displays the inode number of a file.
+
+sysadmin@localhost:~$ ls -i /tmp/file.txt
+215220874 /tmp/file.txt
+
+Directory Entries:
+In a directory's data area, there is a list of files and their corresponding inode numbers.
+When accessing a file, the system uses this table to translate the file name into an inode number.
+plaintext
+Copy code
+File Name | Inode Number
+-------------------------
+passwd    | 123
+shadow    | 175
+group     | 144
+gshadow   | 897
+Hard Links:
+Definition:
+
+Hard links are two or more file names pointing to the same inode.
+Files with the same inode are essentially the same file, and changes made to one file are reflected in all linked files.
+
+Link Count:
+The link count number indicates how many hard links exist for a particular inode.
+When creating a hard link, the link count increases by one for each additional link.
+
+sysadmin@localhost:~$ ls -li file.*
+278772 -rw-rw-r--. 2 sysadmin sysadmin 5 Oct 25 15:53 file.hard.1
+278772 -rw-rw-r--. 2 sysadmin sysadmin 5 Oct 25 15:53 file.original
+
+Creating Hard Links:
+Use the ln command with two arguments: the target file and the new link name.
+
+sysadmin@localhost:~$ ln file.original file.hard.1
+Advantages of Hard Links:
+
+Space Efficiency:
+Hard links do not consume additional disk space since they share the same inode and data blocks.
+Data Synchronization:
+
+Changes made to any linked file are reflected in all linked files, maintaining synchronization.
+Link Count as Reference:
+
+The link count provides a reference count, indicating how many names (hard links) are associated with a particular file.
+Understanding inodes and hard links is fundamental for managing file systems efficiently, especially when dealing with resource-efficient file storage and maintaining data consistency across multiple references to the same file.
