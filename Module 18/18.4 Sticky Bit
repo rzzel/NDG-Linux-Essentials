@@ -1,0 +1,28 @@
+The sticky bit permission is used to prevent other users from deleting files that they do not own in a shared directory. Recall that any user with write permission on a directory can create files in that directory, as well as delete any file in the directory, even if they do not own the file!
+
+The sticky bit permission allows for files to be shared with other users, by changing write permission on the directory so that users can still add and delete files in the directory, but files can only be deleted by the owner of the file or the root user.
+
+A good example of the use of sticky bit directories would be the /tmp and /var/tmp directories. These directories are designed as locations where any user can create a temporary file.
+
+Because these directories are intended to be writable by all users, they are configured to use the sticky bit. Without this special permission, users would be able to delete any files in this directory, including those that belong to other users.
+
+The output of the ls -l command displays the sticky bit by a t character in the execute bit of the others permission group:
+
+sysadmin@localhost:~$ ls -ld /tmp                                               
+drwxrwxrwt 1 root root 4096 Mar 14  2016 /tmp                                   
+A lowercase t means that both the sticky bit and execute permissions are set for others. An uppercase T means that only the sticky bit permission is set.
+
+While the capital S indicated a problem with the setuid or setgid permissions, a capital T does not necessarily indicate a problem, as long as the group owner still has the execute permission.
+
+To set the sticky bit permission symbolically, execute a command like the following:
+
+chmod o+t <directory>
+To set the sticky bit permission numerically, add 1000 to the directory's existing permissions (assume the directory in the following example originally had 775 for its permissions):
+
+chmod 1775 <file|directory>
+To remove the sticky permission symbolically, run:
+
+chmod o-t <directory>
+‌⁠​​⁠​To remove the sticky bit permission numerically, subtract 1000 from the directory's existing permissions:
+
+chmod 0775 <directory>
